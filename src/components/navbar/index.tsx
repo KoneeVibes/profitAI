@@ -1,24 +1,28 @@
 import { HashLink } from "react-router-hash-link";
-import { Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import { Logo } from "../../assets";
 import { navLinks } from "../../data";
 import { Nav } from "./styled";
 import { BaseButton } from "../button";
+import { MenuButton } from "../button/menu";
 
 export const Navbar: React.FC<{}> = () => {
     return (
         <Nav
-            direction={{ desktop: "row" }}
+            direction={{ mobile: "row" }}
             gap={"calc(2 * var(--flexGap))"}
             alignItems={"center"}
             justifyContent={"space-between"}
         >
-            <Logo />
+            <Logo
+                className="logo"
+            />
             <Stack
+                className="navStack"
                 direction={{ desktop: "row" }}
                 gap={"var(--flexGap)"}
                 alignItems={"center"}
-                justifyContent={"space-between"}
+                justifyContent={{ xl: "space-between" }}
             >
                 <nav>
                     {navLinks.map((navLink, i) => {
@@ -42,21 +46,31 @@ export const Navbar: React.FC<{}> = () => {
                         )
                     })}
                 </nav>
-                <BaseButton
-                    location="nav"
+                <Box
+                    component={"div"}
+                    className="callToActionButtonBox"
+                    width={"100%"}
+                    display={"flex"}
+                    alignItems={"center"}
+                    justifyContent={"center"}
                 >
-                    <Typography
-                        variant="button"
-                        fontFamily={"inherit"}
-                        fontWeight={"inherit"}
-                        fontSize={"inherit"}
-                        lineHeight={"inherit"}
-                        color={"inherit"}
+                    <BaseButton
+                        location="nav"
                     >
-                        Telegram
-                    </Typography>
-                </BaseButton>
+                        <Typography
+                            variant="button"
+                            fontFamily={"inherit"}
+                            fontWeight={"inherit"}
+                            fontSize={"inherit"}
+                            lineHeight={"inherit"}
+                            color={"inherit"}
+                        >
+                            Telegram
+                        </Typography>
+                    </BaseButton>
+                </Box>
             </Stack>
+            <MenuButton />
         </Nav>
     )
 }

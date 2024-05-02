@@ -3,7 +3,9 @@ import { Navbar } from "../../components/navbar"
 
 export const Header: React.FC<{}> = () => {
     return (
-        <Box>
+        <Box
+            overflow={"hidden"}
+        >
             <Navbar />
         </Box>
     )
