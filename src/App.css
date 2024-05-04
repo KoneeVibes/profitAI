@@ -9,6 +9,16 @@ html {
   --cardPadding: 2rem;
 }
 
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
 * {
   /* outline: 1px red solid; */
 }

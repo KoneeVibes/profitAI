@@ -1,5 +1,6 @@
 import { Box } from "@mui/material"
 import { Navbar } from "../../components/navbar"
+import { Hero } from "../../components/hero"
 
 export const Header: React.FC<{}> = () => {
     return (
@@ -7,6 +8,7 @@ export const Header: React.FC<{}> = () => {
             overflow={"hidden"}
         >
             <Navbar />
+            <Hero />
         </Box>
     )
 }

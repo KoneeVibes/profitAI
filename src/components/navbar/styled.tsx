@@ -38,6 +38,7 @@ export const Nav = styled(Stack)(
                     height: "stretch",
                     overflow: "overlay",
                     padding: "calc(0.5 * var(--cardPadding)) var(--cardPadding) calc(5 * var(--cardPadding))",
+                    zIndex: 10,
                 }
             },
             [theme.breakpoints.down("tablet")]: {

@@ -1,9 +1,8 @@
 # ProfitAI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 It holds code for a website of a crypto/blockchain project that seeks to revolutionize cryptocurrency and blockchain access.
 
-## Tools/Libraries Used
+### Tools/Libraries Used
 
 * React
 * Typescript
@@ -23,7 +22,7 @@ Install all dependencies that are required to run this project.
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-#### Resources
+### Resources
 
 * [Figma Design](https://www.figma.com/file/ibFeEF36XqEpzlSRmbbaGu/Untitled?fuid=1105454231962636505&source=email_invite)
 

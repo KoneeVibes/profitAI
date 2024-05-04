@@ -1,3 +1,5 @@
+import { useContext, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { Box, Stack, Typography } from "@mui/material";
 import { Logo } from "../../assets";
@@ -5,8 +7,24 @@ import { navLinks } from "../../data";
 import { Nav } from "./styled";
 import { BaseButton } from "../button";
 import { MenuButton } from "../button/menu";
+import { Context } from "../../context";
 
 export const Navbar: React.FC<{}> = () => {
+    const navigate = useNavigate();
+    const { openMenu, setOpenMenu } = useContext(Context);
+
+    useEffect(() => {
+        if (openMenu) {
+            document.body.style.overflowY = "hidden";
+        } else {
+            document.body.style.overflowY = "visible";
+        }
+    }, [openMenu]);
+    const handleLogoClick = () => {
+        setOpenMenu(false);
+        navigate("/");
+    }
+    
     return (
         <Nav
             direction={{ mobile: "row" }}
@@ -16,6 +34,7 @@ export const Navbar: React.FC<{}> = () => {
         >
             <Logo
                 className="logo"
+                onClick={handleLogoClick}
             />
             <Stack
                 className="navStack"
