@@ -1,8 +1,11 @@
 import React from "react";
-import { Box, Typography, useMediaQuery } from "@mui/material";
+import { Box, Stack, Typography, useMediaQuery } from "@mui/material";
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import VideocamIcon from '@mui/icons-material/Videocam';
 import { TypeAnimation } from "react-type-animation";
 import { HeaderImg } from "../../assets";
 import { HeroStack } from "./style";
+import { BaseButton } from "../button";
 
 export const Hero: React.FC<{}> = () => {
     const matches = useMediaQuery('(min-width: 580px) and (max-width: 1023px)');
@@ -69,11 +72,49 @@ export const Hero: React.FC<{}> = () => {
                 >
                     We believe that by leveraging the power of artificial intelligence (AI), we can empower users to make informed decisions and harness the full potential of digital assets and blockchain innovations.
                 </Typography>
+                <Stack
+                    className="callToAction"
+                    direction={{ mobile: matches ? "row" : "column", tablet: "row" }}
+                    gap={"calc(var(--flexGap)/2)"}
+                    padding={"0 0 4rem"}
+                >
+                    <BaseButton
+                        location="heroLeft"
+                        endIcon={<ArrowForwardIcon />}
+                    >
+                        <Typography
+                            variant="button"
+                            fontFamily={"inherit"}
+                            fontWeight={"inherit"}
+                            fontSize={"inherit"}
+                            lineHeight={"inherit"}
+                            color={"inherit"}
+                        >
+                            Get Started
+                        </Typography>
+                    </BaseButton>
+                    <BaseButton
+                        location="heroRight"
+                        startIcon={<VideocamIcon />}
+                    >
+                        <Typography
+                            variant="button"
+                            fontFamily={"inherit"}
+                            fontWeight={"inherit"}
+                            fontSize={"inherit"}
+                            lineHeight={"inherit"}
+                            color={"inherit"}
+                        >
+                            Watch Tutorial
+                        </Typography>
+                    </BaseButton>
+                </Stack>
             </Box>
             <Box
                 flex={"40%"}
             >
                 <HeaderImg
+                    className="headerImg"
                     style={{
                         width: "100%",
                         height: matches ? "595px" : "auto",
