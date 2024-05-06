@@ -14,10 +14,13 @@ export const Hero: React.FC<{}> = () => {
             direction={{ laptop: "row" }}
             gap={{ mobile: "var(--flexGap)", laptop: "calc(2 * var(--flexGap))" }}
             justifyContent={"space-between"}
-            padding={{ mobile: "calc(1 * var(--cardPadding)) 0 calc(3 * var(--cardPadding))", miniTablet: "calc(2 * var(--cardPadding)) 0 calc(3 * var(--cardPadding))", laptop: "calc(3 * var(--cardPadding)) 0 calc(5 * var(--cardPadding))" }}
+            padding={{ mobile: "var(--cardPadding) 0", miniTablet: "calc(2 * var(--cardPadding)) 0", laptop: "calc(3 * var(--cardPadding)) 0" }}
+            overflow={"hidden"}
         >
             <Box
                 flex={"60%"}
+                position={"relative"}
+                zIndex={100}
             >
                 <Typography
                     variant="h1"
@@ -112,6 +115,7 @@ export const Hero: React.FC<{}> = () => {
             </Box>
             <Box
                 flex={"40%"}
+                zIndex={10}
             >
                 <HeaderImg
                     className="headerImg"

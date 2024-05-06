@@ -1,4 +1,4 @@
-import { Github, Medium, Telegram, Twitter, YouTube } from "./assets"
+import { Amazon, CoinMarketCap, Github, Medium, Telegram, Twitter, Uniswap, YouTube } from "./assets"
 
 export const navLinks = [
     {
@@ -52,4 +52,8 @@ export const smIcons = [
         icon: <YouTube />,
         url: "#"
     }
+]
+
+export const clients = [
+    <Amazon />, <CoinMarketCap />, <Uniswap />
 ]

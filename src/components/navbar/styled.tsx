@@ -9,6 +9,9 @@ export const Nav = styled(Stack)(
             border: "1.5px solid #629F943D",
             borderRadius: "21px",
             padding: "var(--cardPadding)",
+            position: "relative",
+            zIndex: 1000,
+            background: "radial-gradient(97.57% 210.75% at 0.9% 2.98%, rgba(17, 48, 49, 0.4) 0%, rgba(17, 48, 49, 0.04) 100%)",
             "& nav": {
                 display: "flex",
                 flexDirection: "row",
@@ -38,7 +41,6 @@ export const Nav = styled(Stack)(
                     height: "stretch",
                     overflow: "overlay",
                     padding: "calc(0.5 * var(--cardPadding)) var(--cardPadding) calc(5 * var(--cardPadding))",
-                    zIndex: 10,
                 }
             },
             [theme.breakpoints.down("tablet")]: {
