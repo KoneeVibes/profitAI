@@ -2,6 +2,8 @@ import './App.css';
 import { Container } from '@mui/material';
 import { Header } from './containers/header';
 import { Clients } from './containers/clients';
+import { Discover } from './containers/discover';
+import { Features } from './containers/features';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
     >
       <Header />
       <Clients />
+      <Discover />
+      <Features />
     </Container>
   );
 }

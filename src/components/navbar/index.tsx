@@ -83,6 +83,7 @@ export const Navbar: React.FC<{}> = () => {
                             fontSize={"inherit"}
                             lineHeight={"inherit"}
                             color={"inherit"}
+                            textTransform={"inherit"}
                         >
                             Telegram
                         </Typography>

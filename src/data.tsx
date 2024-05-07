@@ -57,3 +57,18 @@ export const smIcons = [
 export const clients = [
     <Amazon />, <CoinMarketCap />, <Uniswap />
 ]
+
+export const features = [
+    {
+        name: "Bot",
+        url: ""
+    },
+    {
+        name: "Tools",
+        url: "",
+    },
+    {
+        name: "DApp",
+        url: ""
+    }
+]

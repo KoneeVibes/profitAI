@@ -92,6 +92,7 @@ export const Hero: React.FC<{}> = () => {
                             fontSize={"inherit"}
                             lineHeight={"inherit"}
                             color={"inherit"}
+                            textTransform={"inherit"}
                         >
                             Get Started
                         </Typography>
@@ -107,6 +108,8 @@ export const Hero: React.FC<{}> = () => {
                             fontSize={"inherit"}
                             lineHeight={"inherit"}
                             color={"inherit"}
+                            textTransform={"inherit"}
+
                         >
                             Watch Tutorial
                         </Typography>
