@@ -34,7 +34,7 @@ export const Discover: React.FC<{}> = () => {
                         fontSize={"inherit"}
                         lineHeight={"inherit"}
                     >
-                        Profit Ai
+                        ProfitAi
                     </Typography>, the future of trading crypto.
                 </Typography>
             </Box>
@@ -57,6 +57,7 @@ export const Discover: React.FC<{}> = () => {
             <Box
                 display={"flex"}
                 justifyContent={"center"}
+                overflow={"hidden"}
             >
                 <BaseButton
                     location="discover"

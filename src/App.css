@@ -19,6 +19,38 @@ html {
   }
 }
 
+@keyframes lightening {
+  0% {
+    border: 1px solid;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    border-image-source: linear-gradient(180deg, rgba(38, 153, 86, 0.48) 14.37%, #3FFF90 59.27%);
+    border-image-slice: 1;
+  }
+
+  33% {
+    border: 1px solid;
+    border-bottom: none;
+    border-image-source: linear-gradient(180deg, rgba(38, 153, 86, 0.48) 14.37%, #3FFF90 59.27%);
+    border-image-slice: 1;
+  }
+
+  63% {
+    border: 1px solid;
+    border-right: none;
+    border-top: none;
+    border-image-source: linear-gradient(180deg, rgba(38, 153, 86, 0.48) 14.37%, #3FFF90 59.27%);
+    border-image-slice: 1;
+  }
+
+  100% {
+    border: 1px solid;
+    border-image-source: linear-gradient(180deg, rgba(38, 153, 86, 0.48) 14.37%, #3FFF90 59.27%);
+    border-image-slice: 1;
+  }
+}
+
 * {
   /* outline: 1px red solid; */
 }

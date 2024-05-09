@@ -1,12 +1,14 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { features } from "../../data";
 import { BaseButton } from "../../components/button";
+import { FeaturedItems } from "../../components/featuredItems";
 
 export const Features: React.FC<{}> = () => {
     return (
         <Box
             margin={"0 var(--pagePadding)"}
             padding={"calc(2 * var(--cardPadding)) 0"}
+            overflow={"hidden"}
             sx={{
                 border: "1px solid",
                 borderLeft: "none",
@@ -96,6 +98,7 @@ export const Features: React.FC<{}> = () => {
                     </Stack>
                 </Box>
             </Box>
+            <FeaturedItems />
         </Box >
     )
 }
