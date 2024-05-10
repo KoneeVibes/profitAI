@@ -84,7 +84,7 @@ export const FeaturedItems: React.FC<{}> = () => {
                         backgroundColor: "#03291E",
                         borderRadius: "30px",
                         transition: "all 3s",
-                        animation: "lightening 3s linear infinite",
+                        animation: "lightening 1.5s linear infinite",
                     }}
                 >
                     {featuredItems[shownIndex].img}

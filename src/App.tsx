@@ -4,6 +4,7 @@ import { Header } from './containers/header';
 import { Clients } from './containers/clients';
 import { Discover } from './containers/discover';
 import { Features } from './containers/features';
+import { Tools } from './containers/tools';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Clients />
       <Discover />
       <Features />
+      <Tools />
     </Container>
   );
 }

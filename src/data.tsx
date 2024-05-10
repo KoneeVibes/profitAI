@@ -1,4 +1,4 @@
-import { Amazon, CoinMarketCap, CopyTrading, Github, Medium, Signals, Sniping, Telegram, TelegramBots, Twitter, Uniswap, YouTube } from "./assets"
+import { Amazon, CoinMarketCap, CopyAI, CopyTrading, Dev, Github, MEV, Medium, Presale, Signal, Signals, Sniper, Sniping, Telegram, TelegramBots, Twitter, Uniswap, YouTube } from "./assets"
 
 export const navLinks = [
     {
@@ -98,4 +98,43 @@ export const featuredItems = [
         body: "You can effortlessly follow top traders and replicate their strategies in real time. Our advanced AI algorithms identify skilled traders based on performance metrics, allowing you to diversify your portfolio and maximize potential returns.",
         img: <CopyTrading />,
     }
+]
+
+export const tools = [
+    {
+        index: "01",
+        title: "Multi-chain Sniper Bot",
+        body: "The Multi-chain and Sniper Bot features of ProfitAI have all the essentials you need when it comes to trading in multiple chains and decentralized exchanges.",
+        icon: <Sniper />
+    },
+    {
+        index: "02",
+        title: "Multi-Chain Copy Trading AI",
+        body: "Copy trading AI replicates successful traders' strategies, no advanced skills required. Benefit from expert traders effortlessly. Revolutionize your trading with ProfitAI.",
+        icon: <CopyAI />
+    },
+    {
+        index: "03",
+        title: "ProfitAI Signal Bot",
+        body: "ProfitAI signal bot analyzes crypto markets, generates automated trading signals across multiple chains using technical, fundamental analysis, and machine learning, making trading profitable and enjoyable.",
+        icon: <Signal />
+    },
+    {
+        index: "04",
+        title: "ProfitAI Presale Bot",
+        body: "ProfitAI presale bot automates token purchases during highly sought-after presales, swiftly completing checkouts on various launchpads to increase profit chances effortlessly.",
+        icon: <Presale />
+    },
+    {
+        index: "05",
+        title: "Contract Dev Bot",
+        body: "ProfitAI Contract Dev Ai automates smart contract creation and deployment using NLP and code generation. Features include code generation, templates, syntax checking, testing, deployment guidance, and monitoring.",
+        icon: <Dev />
+    },
+    {
+        index: "06",
+        title: "MEV Bot",
+        body: "MEV (Miner Extractable Value) refers to profits extracted by bots from transaction ordering inefficiencies in DeFi. Bots leverage mempool data to identify and exploit arbitrage opportunities for financial gain.",
+        icon: <MEV />
+    },
 ]
