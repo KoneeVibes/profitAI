@@ -1,4 +1,4 @@
-import { Amazon, CoinMarketCap, CopyAI, CopyTrading, Dev, Github, MEV, Medium, Presale, Signal, Signals, Sniper, Sniping, Telegram, TelegramBots, Twitter, Uniswap, YouTube } from "./assets"
+import { Amazon, AmazonLogo, CoinMarketCap, CoinMarketCapLogo, CopyAI, CopyTrading, Dev, Github, Icon, MEV, Medium, Presale, Signal, Signals, Sniper, Sniping, Telegram, TelegramBots, Twitter, Uniswap, UniswapLogo, YouTube } from "./assets"
 
 export const navLinks = [
     {
@@ -137,4 +137,40 @@ export const tools = [
         body: "MEV (Miner Extractable Value) refers to profits extracted by bots from transaction ordering inefficiencies in DeFi. Bots leverage mempool data to identify and exploit arbitrage opportunities for financial gain.",
         icon: <MEV />
     },
+]
+
+export const partners = [
+    {
+        logo: <AmazonLogo />,
+        title: "AMAZON AWS: ",
+        info: "Tech start-up benefits including accessibility to AWS Tools, product building benefits, academies, increased server optimization & testing material"
+    },
+    {
+        logo: <UniswapLogo />,
+        title: "Uniswap: ",
+        info: "Direct access to Uniswap's smart contract APIs within the product's interface. This allows users to directly interact with Uniswap's decentralized exchange to execute trades and access liquidity pools seamlessly through the product's platform"
+    },
+    {
+        logo: <CoinMarketCapLogo />,
+        title: "CoinMarketCap: ",
+        info: "Integrate CoinMarketSwap's liquidity pools and trading functionalities, enabling users to execute trades and access market data directly through the Profit AI interface. Additionally, collaboration may involve joint marketing efforts to promote the integrated services and expand user adoption across both platforms."
+    },
+]
+
+export const team = [
+    {
+        title: "CEO",
+        name: "Harmony  Tim",
+        headshot: <Icon />
+    },
+    {
+        title: "COO",
+        name: "ITYB schew",
+        headshot: <Icon />
+    },
+    {
+        title: "CM",
+        name: "BROWNY Jones",
+        headshot: <Icon />
+    }
 ]

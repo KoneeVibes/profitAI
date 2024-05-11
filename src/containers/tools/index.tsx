@@ -1,6 +1,7 @@
-import { Box, Card, CardContent, CardHeader, Grid, Typography } from "@mui/material"
-import { tools } from "../../data"
-import { ToolBox } from "./styled"
+import { Box, Card, CardContent, CardHeader, Grid, Typography } from "@mui/material";
+import { tools } from "../../data";
+import { ToolBox } from "./styled";
+import "../../configs/lightening.css"
 
 export const Tools: React.FC<{}> = () => {
     return (
@@ -52,7 +53,7 @@ export const Tools: React.FC<{}> = () => {
                 container
                 gap={"calc(1.5 * var(--flexGap))"}
                 justifyContent={"space-between"}
-                padding={"calc(2 * var(--cardPadding)) 0"}
+                padding={{ mobile: "var(--cardPadding) 0", tablet: "calc(2 * var(--cardPadding)) 0" }}
             >
                 {tools.map((tool, i) => {
                     return (
@@ -62,13 +63,13 @@ export const Tools: React.FC<{}> = () => {
                             mobile={12}
                             tablet={5}
                             desktop={3}
+                            className="borderLight"
                             sx={{
                                 borderRadius: "25px",
                                 overflow: "hidden",
                                 maxWidth: "100% !important",
                                 flexGrow: "1 !important",
                             }}
-                            className="tool"
                         >
                             <Card
                                 sx={{

@@ -18,6 +18,12 @@ export const FeaturedItemsStack = styled(Stack)(
                 "& svg": {
                     width: "100%",
                 }
+            },
+            "& .center": {
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
             }
         }
     }

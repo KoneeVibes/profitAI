@@ -5,7 +5,8 @@ import { FeaturedItemsStack } from "./styled";
 
 export const FeaturedItems: React.FC<{}> = () => {
     const [shownIndex, setShownIndex] = useState(0);
-    const matches = useMediaQuery('(max-width: 200px)');
+    const smallerScreens = useMediaQuery('(max-width: 200px)');
+    const laptop = useMediaQuery('(min-width: 1024px)');
     return (
         <FeaturedItemsStack
             padding={{ mobile: "calc(1.5 * var(--cardPadding)) 0", tablet: "calc(2 * var(--cardPadding)) 0 var(--cardPadding)" }}
@@ -27,7 +28,7 @@ export const FeaturedItems: React.FC<{}> = () => {
                             <Box
                                 padding={"calc(var(--cardPadding)/2)"}
                                 bgcolor={"#FFFFFF0A"}
-                                width={matches ? "auto" : "fit-content"}
+                                width={smallerScreens ? "auto" : "fit-content"}
                                 borderRadius={"8px"}
                             >
                                 <Typography
@@ -72,20 +73,12 @@ export const FeaturedItems: React.FC<{}> = () => {
             </Stack>
             <Box
                 flex={0.5}
-                display={"flex"}
-                justifyContent={"center"}
-                alignItems={"center"}
+                component={"div"}
+                className="lightening"
             >
                 <Box
                     component={"div"}
-                    className="featuredImg"
-                    sx={{
-                        padding: "var(--cardPadding)",
-                        backgroundColor: "#03291E",
-                        borderRadius: "30px",
-                        transition: "all 3s",
-                        animation: "lightening 1.5s linear infinite",
-                    }}
+                    className={laptop ? "featuredImg center" : "featuredImg"}
                 >
                     {featuredItems[shownIndex].img}
                 </Box>

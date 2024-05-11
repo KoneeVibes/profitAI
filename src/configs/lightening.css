@@ -1,0 +1,22 @@
+.borderLight:hover {
+    position: relative;
+}
+
+.borderLight:hover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 30px;
+    padding: 10;
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    background: linear-gradient(180deg, rgba(38, 153, 86, 0.48) 14.37%, #3FFF90 59.27%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}

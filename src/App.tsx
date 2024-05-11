@@ -5,6 +5,8 @@ import { Clients } from './containers/clients';
 import { Discover } from './containers/discover';
 import { Features } from './containers/features';
 import { Tools } from './containers/tools';
+import { Partners } from './containers/partners';
+import { Team } from './containers/team';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
       <Discover />
       <Features />
       <Tools />
+      <Partners />
+      <Team />
     </Container>
   );
 }
