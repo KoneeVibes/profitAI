@@ -6,7 +6,7 @@ import { TeamBox } from "./styled";
 export const Team: React.FC<{}> = () => {
     return (
         <TeamBox
-            margin={{ mobile: "var(--cardPadding) var(--pagePadding)", laptop: "calc(1.5 * var(--cardPadding)) var(--pagePadding)", desktop: "calc(3 * var(--cardPadding)) var(--pagePadding)" }}
+            margin={{ mobile: "var(--cardPadding) var(--pagePadding)", laptop: "calc(3 * var(--cardPadding)) var(--pagePadding) calc(1.5 * var(--cardPadding))", desktop: "calc(3 * var(--cardPadding)) var(--pagePadding) var(--cardPadding)" }}
             padding={"var(--cardPadding) 0"}
             position={"relative"}
             sx={{

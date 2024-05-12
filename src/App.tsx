@@ -7,6 +7,8 @@ import { Features } from './containers/features';
 import { Tools } from './containers/tools';
 import { Partners } from './containers/partners';
 import { Team } from './containers/team';
+import { Tokenomics } from './containers/tokenomics';
+import { Roadmap } from './containers/roadmap';
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
       <Tools />
       <Partners />
       <Team />
+      <Tokenomics />
     </Container>
   );
 }
