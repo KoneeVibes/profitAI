@@ -1,9 +1,24 @@
-import { Box, Card, Grid, Stack, Step, StepContent, StepLabel, Stepper, Typography } from "@mui/material"
-import { roadmap } from "../../data"
+import { useEffect } from "react";
+import { RoadmapBox } from "./styles/base";
+import { Box, Card, Step, StepLabel, Stepper, Typography } from "@mui/material";
+import { roadmap } from "../../data";
+import { CustomStepIcon } from "./stepIcon";
+import stepperBg from "../../assets/roadmapbg.svg";
 
 export const Roadmap: React.FC<{}> = () => {
+    useEffect(() => {
+        const steps = Array.from(document.getElementsByClassName("MuiStepLabel-iconContainer")) as HTMLElement[];
+        steps.forEach((step, i) => {
+            step.addEventListener("click", () => {
+                window.scrollTo({
+                    top: step.getBoundingClientRect().top + window.scrollY,
+                    behavior: "smooth"
+                });
+            });
+        });
+    }, []);
     return (
-        <Box
+        <RoadmapBox
             padding={"calc(2 * var(--cardPadding)) var(--pagePadding)"}
         >
             <Box
@@ -57,15 +72,43 @@ export const Roadmap: React.FC<{}> = () => {
             </Box>
             <Stepper
                 orientation="vertical"
-                activeStep={0}
+                sx={{
+                    display: "grid",
+                    gridTemplateColumns: { laptop: "47% 47%" },
+                    columnGap: "var(--flexGap)",
+                    rowGap: { mobile: "2rem", laptop: "0" },
+                    justifyContent: "space-between",
+                    position: "relative",
+                    backgroundImage: `url(${stepperBg})`,
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    overflow: "hidden",
+                    padding: "var(--sectionMargin) 0",
+                    margin: { laptop: "calc(2 * var(--sectionMargin)) 0" },
+                }}
             >
+                <div className="divider"></div>
                 {roadmap.map((milestone, i) => {
                     return (
                         <Step
                             key={i}
+                            sx={{
+                                marginLeft: { mobile: "2rem", laptop: "unset" },
+                                visibility: { laptop: milestone.placeholder ? "hidden" : "visible" },
+                                display: { mobile: milestone.placeholder ? "none" : "block", laptop: "unset" },
+                                overflow: "hidden",
+                            }}
                         >
-                            <StepLabel>
-                                <Card>
+                            <StepLabel
+                                StepIconComponent={CustomStepIcon}
+                            >
+                                <Card
+                                    sx={{
+                                        background: "linear-gradient(91.81deg, rgba(32, 56, 51, 0.5) 0%, rgba(2, 29, 21, 0) 100%)",
+                                        borderRadius: "16px",
+                                        padding: "var(--cardPadding)",
+                                    }}
+                                >
                                     <Typography
                                         variant="h3"
                                         fontFamily={"Inter"}
@@ -77,16 +120,38 @@ export const Roadmap: React.FC<{}> = () => {
                                     >
                                         {milestone.title}
                                     </Typography>
-                                    <ul>
-                                        <li>{milestone.focus}</li>
-                                        <li>{milestone.objective}</li>
-                                    </ul>
+                                    <Box>
+                                        <Typography
+                                            variant="body1"
+                                            fontFamily={"Open Sans"}
+                                            fontWeight={400}
+                                            fontSize={{ mobile: "16px" }}
+                                            lineHeight={"normal"}
+                                            color={"#FFFFFF99"}
+                                            whiteSpace={"normal"}
+                                            marginBlockStart={"2rem"}
+                                        >
+                                            {milestone.focus}
+                                        </Typography>
+                                        <Typography
+                                            variant="body1"
+                                            fontFamily={"Open Sans"}
+                                            fontWeight={400}
+                                            fontSize={{ mobile: "16px" }}
+                                            lineHeight={"normal"}
+                                            color={"#FFFFFF99"}
+                                            whiteSpace={"normal"}
+                                            marginBlockStart={"2rem"}
+                                        >
+                                            {milestone.objective}
+                                        </Typography>
+                                    </Box>
                                 </Card>
                             </StepLabel>
                         </Step>
                     )
                 })}
             </Stepper>
-        </Box>
+        </RoadmapBox>
     )
 }
