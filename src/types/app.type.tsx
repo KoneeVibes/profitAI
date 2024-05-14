@@ -13,4 +13,5 @@ export type ButtonStyles = {
     radius: string;
     border?: string;
     padding?: string;
+    width: string
 }

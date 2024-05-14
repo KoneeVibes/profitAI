@@ -1,9 +1,34 @@
 import { Box, Card, CardContent, CardHeader, Stack, Typography } from "@mui/material";
+import { pricing } from "../../data";
+import { CheckMark, Tick } from "../../assets";
+import { BaseButton } from "../../components/button";
+import { PricingBox } from "./styled";
+import { useEffect } from "react";
 
 export const Pricing: React.FC<{}> = () => {
+    useEffect(() => {
+        const pricing = document.getElementById("pricing");
+        const free = document.getElementById("free");
+        const premium = document.getElementById("premium");
+        pricing?.addEventListener("mouseover", () => {
+            free?.classList.add("free");
+            premium?.classList.add("premium");
+        });
+        pricing?.addEventListener("mouseout", () => {
+            free?.classList.remove("free");
+            premium?.classList.remove("premium");
+        })
+    }, []);
     return (
-        <Box
-            padding={"0 var(--pagePadding) var(--cardPadding)"}
+        <PricingBox
+            id="pricing"
+            margin={"0 var(--pagePadding)"}
+            padding={{ mobile: "0 0 calc(2 * var(--cardPadding))", tablet: "0 0 calc(3 * var(--cardPadding))", laptop: "0 0 calc(4 * var(--cardPadding))" }}
+            sx={{
+                borderBottom: "1px solid",
+                borderImageSource: "linear-gradient(90deg, #00150F 0%, #32C971 53.34%, #062519 100%)",
+                borderImageSlice: 1,
+            }}
         >
             <Box
                 marginLeft={"auto"}
@@ -55,14 +80,24 @@ export const Pricing: React.FC<{}> = () => {
             </Box>
             <Stack
                 gap={"var(--flexGap)"}
-                direction={{ laptop: "row" }}
+                direction={{ tablet: "row" }}
+                overflow={"hidden"}
             >
                 <Card
+                    component={"div"}
+                    id="free"
                     sx={{
                         flex: 1,
                         background: "#03291E",
+                        position: "relative",
+                        left: 0,
                         padding: "var(--cardPadding)",
-                        borderRadius: "30px"
+                        borderRadius: "30px",
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "space-between",
+                        transform: { laptop: "scale(0.8)" },
+                        transition: "all .3s",
                     }}
                 >
                     <CardHeader
@@ -88,6 +123,7 @@ export const Pricing: React.FC<{}> = () => {
                                 fontSize={"45px"}
                                 lineHeight={"normal"}
                                 color={"#3FFF90"}
+                                whiteSpace={"normal"}
                             >
                                 0% <Typography
                                     component={"span"}
@@ -96,6 +132,7 @@ export const Pricing: React.FC<{}> = () => {
                                     fontWeight={600}
                                     fontSize={{ mobile: "20px" }}
                                     lineHeight={"inherit"}
+                                    whiteSpace={"inherit"}
                                     marginBlockEnd={"1rem"}
                                 >
                                     Token Holding
@@ -106,16 +143,77 @@ export const Pricing: React.FC<{}> = () => {
                             borderBottom: "1px solid #FFFFFF1A",
                         }}
                     />
-                    <CardContent>
-
+                    <CardContent
+                        sx={{
+                            height: "100%",
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "space-between",
+                        }}
+                    >
+                        {pricing.free.features.map((feature, i) => {
+                            return (
+                                <Stack
+                                    key={i}
+                                    gap={"0.5rem"}
+                                    direction={"row"}
+                                    overflow={"hidden"}
+                                >
+                                    <CheckMark style={{ flexShrink: 0 }} />
+                                    <Typography
+                                        variant="body1"
+                                        fontFamily={"Open Sans"}
+                                        fontWeight={400}
+                                        fontSize={{ mobile: "16px" }}
+                                        lineHeight={"normal"}
+                                        color={"#FFFFFF"}
+                                        whiteSpace={"normal"}
+                                        marginBlockEnd={"1rem"}
+                                    >
+                                        {feature}
+                                    </Typography>
+                                </Stack>
+                            )
+                        })}
+                        <Box
+                            overflow={"hidden"}
+                            marginBlockStart={"2rem"}
+                        >
+                            <BaseButton
+                                location="pricing"
+                                sx={{
+                                    width: "100%"
+                                }}
+                            >
+                                <Typography
+                                    variant="button"
+                                    fontFamily={"inherit"}
+                                    fontWeight={"inherit"}
+                                    fontSize={"inherit"}
+                                    lineHeight={"inherit"}
+                                    color={"inherit"}
+                                    textTransform={"inherit"}
+                                >
+                                    Choose Plan
+                                </Typography>
+                            </BaseButton>
+                        </Box>
                     </CardContent>
                 </Card>
                 <Card
+                    component={"div"}
+                    id="premium"
                     sx={{
                         flex: 1,
                         background: "#03291E",
+                        position: "relative",
+                        left: 0,
                         padding: "var(--cardPadding)",
-                        borderRadius: "30px"
+                        borderRadius: "30px",
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "space-between",
+                        transition: "all .3s",
                     }}
                 >
                     <CardHeader
@@ -146,6 +244,7 @@ export const Pricing: React.FC<{}> = () => {
                                 fontSize={"45px"}
                                 lineHeight={"normal"}
                                 color={"#3FFF90"}
+                                whiteSpace={"normal"}
                             >
                                 1% <Typography
                                     component={"span"}
@@ -154,6 +253,7 @@ export const Pricing: React.FC<{}> = () => {
                                     fontWeight={600}
                                     fontSize={{ mobile: "20px" }}
                                     lineHeight={"inherit"}
+                                    whiteSpace={"inherit"}
                                     marginBlockEnd={"1rem"}
                                 >
                                     Token Holding
@@ -164,11 +264,100 @@ export const Pricing: React.FC<{}> = () => {
                             borderBottom: "1px solid #FFFFFF1A",
                         }}
                     />
-                    <CardContent>
-
+                    <CardContent
+                        sx={{
+                            height: "100%",
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "space-between",
+                        }}
+                    >
+                        {pricing.premium.features.map((feature, i) => {
+                            return (
+                                <Stack
+                                    key={i}
+                                    gap={"0.5rem"}
+                                    direction={"row"}
+                                    overflow={"hidden"}
+                                >
+                                    <CheckMark style={{ flexShrink: 0 }} />
+                                    <Typography
+                                        variant="body1"
+                                        fontFamily={"Open Sans"}
+                                        fontWeight={400}
+                                        fontSize={{ mobile: "16px" }}
+                                        lineHeight={"normal"}
+                                        color={"#FFFFFF"}
+                                        whiteSpace={"normal"}
+                                        marginBlockEnd={"1rem"}
+                                    >
+                                        {feature}
+                                    </Typography>
+                                </Stack>
+                            )
+                        })}
+                        <Typography
+                            variant="body1"
+                            fontFamily={"Open Sans"}
+                            fontWeight={700}
+                            fontSize={{ mobile: "16px" }}
+                            lineHeight={"normal"}
+                            color={"#3FFF90"}
+                            whiteSpace={"normal"}
+                            marginBlockEnd={"1rem"}
+                        >
+                            3 ways to access premium features
+                        </Typography>
+                        {pricing.premium.qualifiers.map((qualifier, i) => {
+                            return (
+                                <Stack
+                                    key={i}
+                                    gap={"0.5rem"}
+                                    direction={"row"}
+                                    overflow={"hidden"}
+                                >
+                                    <Tick style={{ flexShrink: 0 }} />
+                                    <Typography
+                                        variant="body1"
+                                        fontFamily={"Open Sans"}
+                                        fontWeight={400}
+                                        fontSize={{ mobile: "16px" }}
+                                        lineHeight={"normal"}
+                                        color={"#FFFFFF"}
+                                        whiteSpace={"normal"}
+                                        marginBlockEnd={"1rem"}
+                                    >
+                                        {qualifier}
+                                    </Typography>
+                                </Stack>
+                            )
+                        })}
+                        <Box
+                            overflow={"hidden"}
+                            marginBlockStart={"2rem"}
+                        >
+                            <BaseButton
+                                location="pricing"
+                                sx={{
+                                    width: "100%"
+                                }}
+                            >
+                                <Typography
+                                    variant="button"
+                                    fontFamily={"inherit"}
+                                    fontWeight={"inherit"}
+                                    fontSize={"inherit"}
+                                    lineHeight={"inherit"}
+                                    color={"inherit"}
+                                    textTransform={"inherit"}
+                                >
+                                    Choose Plan
+                                </Typography>
+                            </BaseButton>
+                        </Box>
                     </CardContent>
                 </Card>
             </Stack>
-        </Box>
+        </PricingBox >
     )
 }

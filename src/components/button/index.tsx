@@ -15,6 +15,7 @@ export const BaseButton: React.FC<BaseButtonType & Omit<ButtonProps, keyof BaseB
             border: getButtonStyles(location).border,
             padding: getButtonStyles(location).padding,
             textTransform: "capitalize",
+            width: getButtonStyles(location).width,
             minWidth: 0,
             "&:hover": {
                 backgroundColor: getButtonStyles(location).bg,

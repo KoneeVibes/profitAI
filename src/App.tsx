@@ -10,6 +10,7 @@ import { Team } from './containers/team';
 import { Tokenomics } from './containers/tokenomics';
 import { Roadmap } from './containers/roadmap';
 import { Pricing } from './containers/pricing';
+import { Profit } from './containers/profit';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
       <Tokenomics />
       <Roadmap />
       <Pricing />
+      <Profit />
     </Container>
   );
 }

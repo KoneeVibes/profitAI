@@ -262,3 +262,19 @@ export const roadmap = [
         objective: ""
     }
 ]
+
+export const pricing = {
+    free: {
+        features: [
+            "Acess to trading bot"
+        ]
+    },
+    premium: {
+        features: [
+            "0% Trading fees", "Access to COPY TRADE AI", "Access to bribery Sniping.", "Access to premium presale with multiple X features", "Higher Revshare %", "Get premium subscription now",
+        ],
+        qualifiers: [
+            "be among the first 100 bot users for 30 consecutive times with a minimum $200  per trade", "Refer 30 active bot users", "Own 10,000 $Profit"
+        ]
+    }
+}

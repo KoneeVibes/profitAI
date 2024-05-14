@@ -7,21 +7,21 @@ export const getButtonStyles = (location: string): ButtonStyles => {
         color: "#0C263A",
         bg: "#3FFF90",
         padding: "1rem 2rem",
+        width: "auto",
+        radius: "8px",
+        border: "none",
     };
 
     switch (location) {
         case "nav":
             return {
                 ...baseStyles,
-                radius: "8px",
-                border: "none",
             };
         case "heroLeft":
         case "discover":
             return {
                 ...baseStyles,
                 radius: "40px",
-                border: "none",
             };
         case "heroRight":
             return {
@@ -35,13 +35,15 @@ export const getButtonStyles = (location: string): ButtonStyles => {
             return {
                 ...baseStyles,
                 padding: "1rem 4rem",
-                radius: "8px",
             };
+        case "pricing":
+            return {
+                ...baseStyles,
+                width: "100%"
+            }
         default:
             return {
                 ...baseStyles,
-                radius: "8px",
-                border: "none",
             };
     }
 };

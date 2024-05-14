@@ -22,3 +22,5 @@ export { ReactComponent as Icon } from "./icon.svg";
 export { ReactComponent as AmazonLogo } from "./amazonLogo.svg";
 export { ReactComponent as UniswapLogo } from "./uniswapLogo.svg";
 export { ReactComponent as CoinMarketCapLogo } from "./coinmarketcapLogo.svg";
+export { ReactComponent as CheckMark } from "./checkMark.svg";
+export { ReactComponent as Tick } from "./tick.svg";
