@@ -278,3 +278,26 @@ export const pricing = {
         ]
     }
 }
+
+export const qanda = [
+    {
+        question: "Can I use a high frequency trading strategy?",
+        answer: "We DO NOT recommend using a high frequency trading strategy on our platform. This can cause a strain on the performance on the system for us, you and other clients. If the system"
+    },
+    {
+        question: 'Account Connection Error "An error has occurred"',
+        answer: "We DO NOT recommend using a high frequency trading strategy on our platform. This can cause a strain on the performance on the system for us, you and other clients. If the system"
+    },
+    {
+        question: 'Account Connection Error "System at maximum capacity"',
+        answer: "We DO NOT recommend using a high frequency trading strategy on our platform. This can cause a strain on the performance on the system for us, you and other clients. If the system"
+    },
+    {
+        question: "How is pricing structured?",
+        answer: "We DO NOT recommend using a high frequency trading strategy on our platform. This can cause a strain on the performance on the system for us, you and other clients. If the system"
+    },
+    {
+        question: "Risk Setting Examples",
+        answer: "We DO NOT recommend using a high frequency trading strategy on our platform. This can cause a strain on the performance on the system for us, you and other clients. If the system"
+    },
+]

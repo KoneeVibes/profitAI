@@ -8,7 +8,7 @@ import stepperBg from "../../assets/roadmapbg.svg";
 export const Roadmap: React.FC<{}> = () => {
     useEffect(() => {
         const steps = Array.from(document.getElementsByClassName("MuiStepLabel-iconContainer")) as HTMLElement[];
-        steps.forEach((step, i) => {
+        steps.forEach((step) => {
             step.addEventListener("click", () => {
                 window.scrollTo({
                     top: step.getBoundingClientRect().top + window.scrollY,

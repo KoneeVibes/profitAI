@@ -6,12 +6,17 @@ export type BaseButtonType = {
 }
 
 export type ButtonStyles = {
-    size: number;
-    weight: number;
-    color: string;
-    bg: string;
-    radius: string;
-    border?: string;
-    padding?: string;
+    size: number
+    weight: number
+    color: string
+    bg: string
+    radius: string
+    border?: string
+    padding?: string
     width: string
+}
+
+export type QandAProps = {
+    question: string
+    answer: string
 }

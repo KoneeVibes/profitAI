@@ -11,6 +11,8 @@ import { Tokenomics } from './containers/tokenomics';
 import { Roadmap } from './containers/roadmap';
 import { Pricing } from './containers/pricing';
 import { Profit } from './containers/profit';
+import { FAQ } from './containers/FAQ';
+import { Footer } from './containers/footer';
 
 function App() {
   return (
@@ -33,6 +35,8 @@ function App() {
       <Roadmap />
       <Pricing />
       <Profit />
+      <FAQ />
+      <Footer />
     </Container>
   );
 }

@@ -213,7 +213,7 @@ export const Pricing: React.FC<{}> = () => {
                         display: "flex",
                         flexDirection: "column",
                         justifyContent: "space-between",
-                        transition: "all .3s",
+                        transition: "all .3s ease-in-out",
                     }}
                 >
                     <CardHeader
