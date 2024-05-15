@@ -170,7 +170,7 @@ export const Partners: React.FC<{}> = () => {
                         >
                             Highlighting ProfitAI's Web2 partner integrations and their significant impact on our product is crucial. With numerous partnerships, it's vital to understand each one's specific benefits.<br /><span style={{ display: "block", height: "2rem" }} />
 
-                            These partnerships enhance Website AI's development and future brand visibility. Amazon AWS, Uniswap, and CoinMarketCap are seamlessly integrated into our dApp, optimizing efficiency. Our Shopify integration enables e-commerce website creation, enriching our product offerings and project success.
+                            These partnerships enhance Website AI's development and future brand visibility. Amazon AWS, Uniswap, and CoinMarketCap are seamlessly integrated into our dApp, optimizing efficiency.
                         </Typography>
                     </CardContent>
                 </Card>
