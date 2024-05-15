@@ -41,6 +41,13 @@ export const getButtonStyles = (location: string): ButtonStyles => {
                 ...baseStyles,
                 width: "100%"
             }
+        case "footer":
+            return {
+                ...baseStyles,
+                size: 8,
+                color: "#FFFFFF",
+                bg: "#124D6D",
+            }
         default:
             return {
                 ...baseStyles,

@@ -109,7 +109,6 @@ export const Hero: React.FC<{}> = () => {
                             lineHeight={"inherit"}
                             color={"inherit"}
                             textTransform={"inherit"}
-
                         >
                             Watch Tutorial
                         </Typography>

@@ -1,4 +1,4 @@
-import { Amazon, AmazonLogo, CoinMarketCap, CoinMarketCapLogo, CopyAI, CopyTrading, Dev, Github, Icon, MEV, Medium, Presale, Signal, Signals, Sniper, Sniping, Telegram, TelegramBots, Twitter, Uniswap, UniswapLogo, YouTube } from "./assets"
+import { Amazon, AmazonLogo, CoinMarketCap, CoinMarketCapLogo, CopyAI, CopyTrading, Dev, Github, GithubIcon, Icon, MEV, Medium, Presale, Signal, Signals, Sniper, Sniping, Telegram, TelegramBots, TelegramIcon, Twitter, TwitterIcon, Uniswap, UniswapLogo, YouTube, YoutubeIcon } from "./assets"
 
 export const navLinks = [
     {
@@ -177,20 +177,20 @@ export const team = [
 
 export const tokenomics = [
     {
-        name: "Bot",
-        subtext: "Bot"
+        name: "Taxes",
+        subtext: "4/4"
     },
     {
-        name: "Bot",
-        subtext: "Bot"
+        name: "Max Wallet",
+        subtext: "Unlimited"
     },
     {
-        name: "Bot",
-        subtext: "Bot"
+        name: "Total Supply",
+        subtext: "1,000,000"
     },
     {
-        name: "Bot",
-        subtext: "Bot"
+        name: "Liquidity Lock",
+        subtext: "12 Months With UNCX"
     },
 ]
 
@@ -300,4 +300,58 @@ export const qanda = [
         question: "Risk Setting Examples",
         answer: "We DO NOT recommend using a high frequency trading strategy on our platform. This can cause a strain on the performance on the system for us, you and other clients. If the system"
     },
+]
+
+export const footerLinks = {
+    "Quick links": [
+        {
+            name: "About Us",
+            url: ""
+        },
+        {
+            name: "Features",
+            url: ""
+        },
+        {
+            name: "KYC",
+            url: ""
+        },
+        {
+            name: "Token",
+            url: ""
+        }
+    ],
+    "Support": [
+        {
+            name: "GitBook",
+            url: ""
+        },
+        {
+            name: "Bot",
+            url: ""
+        },
+        {
+            name: "FAQs",
+            url: ""
+        },
+    ]
+};
+
+export const socialMedia = [
+    {
+        icon: <TelegramIcon />,
+        url: ""
+    },
+    {
+        icon: <TwitterIcon />,
+        url: ""
+    },
+    {
+        icon: <GithubIcon />,
+        url: ""
+    },
+    {
+        icon: <YoutubeIcon />,
+        url: ""
+    }
 ]
