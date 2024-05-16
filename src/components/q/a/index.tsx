@@ -2,11 +2,20 @@ import { Box, IconButton, Stack, Typography } from "@mui/material";
 import { QandAStack } from "./styled";
 import AddIcon from '@mui/icons-material/Add';
 import { QandAProps } from "../../../types/app.type";
+import { motion } from "framer-motion";
+import { container, item } from "../../../configs/slideIn";
 
 export const QandA: React.FC<QandAProps> = ({ question, answer }) => {
     return (
-        <QandAStack>
+        <QandAStack
+            component={motion.div}
+            variants={container}
+            initial={"hidden"}
+            whileInView={"show"}
+        >
             <Stack
+                component={motion.div}
+                variants={item}
                 direction={"row"}
                 gap={"calc(var(--flexGap)/2)"}
                 justifyContent={"space-between"}
@@ -33,7 +42,10 @@ export const QandA: React.FC<QandAProps> = ({ question, answer }) => {
                     <AddIcon style={{ color: "#FFFFFF" }} />
                 </IconButton>
             </Stack>
-            <Box>
+            <Box
+                component={motion.div}
+                variants={item}
+            >
                 <Typography
                     variant="body1"
                     className="answer"

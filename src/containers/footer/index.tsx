@@ -2,6 +2,8 @@ import { Box, IconButton, Stack, Typography, useMediaQuery } from "@mui/material
 import { footerLinks, socialMedia } from "../../data";
 import { BaseButton } from "../../components/button";
 import TelegramIcon from '@mui/icons-material/Telegram';
+import { motion } from "framer-motion";
+import { container, item } from "../../configs/slideIn";
 
 export const Footer: React.FC<{}> = () => {
     const matches = useMediaQuery('(max-width:280px)');
@@ -10,12 +12,18 @@ export const Footer: React.FC<{}> = () => {
             padding={"calc(2 * var(--cardPadding)) var(--pagePadding)"}
         >
             <Stack
+                component={motion.div}
+                variants={container}
+                initial={"hidden"}
+                whileInView={"show"}
                 gap={{ mobile: "calc(2 * var(--flexGap))", tablet: "var(--flexGap)" }}
                 direction={{ tablet: "row" }}
                 paddingBottom={{ mobile: "var(--cardPadding)", tablet: "calc(2 * var(--cardPadding))" }}
             >
                 <Box
                     flex={0.6}
+                    component={motion.div}
+                    variants={item}
                     overflow={"hidden"}
                 >
                     <BaseButton
@@ -51,6 +59,10 @@ export const Footer: React.FC<{}> = () => {
                 </Box>
                 <Stack
                     flex={0.4}
+                    component={motion.div}
+                    variants={container}
+                    initial={"hidden"}
+                    whileInView={"show"}
                     gap={{ mobile: "var(--flexGap)", tablet: "calc(2 * var(--flexGap))" }}
                     direction={{ tablet: "row" }}
                 >
@@ -58,6 +70,8 @@ export const Footer: React.FC<{}> = () => {
                         return (
                             <Box
                                 key={i}
+                                component={motion.div}
+                                variants={item}
                             >
                                 <Box>
                                     <Typography
@@ -100,6 +114,10 @@ export const Footer: React.FC<{}> = () => {
                 </Stack>
             </Stack>
             <Stack
+                component={motion.div}
+                variants={container}
+                initial={"hidden"}
+                whileInView={"show"}
                 borderTop={"1px solid #FFFFFF1A"}
                 direction={{ tablet: "row" }}
                 paddingTop={"var(--cardPadding)"}
@@ -107,7 +125,10 @@ export const Footer: React.FC<{}> = () => {
                 alignItems={{ tablet: "center" }}
                 justifyContent={"space-between"}
             >
-                <Box>
+                <Box
+                    component={motion.div}
+                    variants={item}
+                >
                     <Typography
                         variant="subtitle1"
                         fontFamily={"Open Sans"}
@@ -131,6 +152,8 @@ export const Footer: React.FC<{}> = () => {
                     </Typography>
                 </Box>
                 <Stack
+                    component={motion.div}
+                    variants={item}
                     gap={"calc(var(--flexGap)/4)"}
                     direction={{ mobile: "row" }}
                     flexWrap={"wrap"}

@@ -4,6 +4,8 @@ import { CheckMark, Tick } from "../../assets";
 import { BaseButton } from "../../components/button";
 import { PricingBox } from "./styled";
 import { useEffect } from "react";
+import { motion } from "framer-motion";
+import { container, item } from "../../configs/slideIn";
 
 export const Pricing: React.FC<{}> = () => {
     useEffect(() => {
@@ -31,12 +33,18 @@ export const Pricing: React.FC<{}> = () => {
             }}
         >
             <Box
+                component={motion.div}
+                variants={container}
+                initial={"hidden"}
+                whileInView={"show"}
                 marginLeft={"auto"}
                 marginRight={"auto"}
                 width={{ tablet: "85%", laptop: "70%", desktop: "50%" }}
             >
                 <Typography
                     variant="h2"
+                    component={motion.h2}
+                    variants={item}
                     fontFamily={"Inter"}
                     fontWeight={600}
                     fontSize={{ mobile: 30, miniTablet: 35, tablet: 40, laptop: 47 }}
@@ -62,6 +70,8 @@ export const Pricing: React.FC<{}> = () => {
                 </Typography>
                 <Typography
                     variant="body1"
+                    component={motion.h2}
+                    variants={item}
                     fontFamily={"Poppins"}
                     fontWeight={400}
                     fontSize={{ mobile: 16 }}

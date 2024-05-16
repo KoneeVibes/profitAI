@@ -1,5 +1,7 @@
-import { Box, Stack, Typography } from "@mui/material"
-import { tokenomics } from "../../data"
+import { Box, Stack, Typography } from "@mui/material";
+import { tokenomics } from "../../data";
+import { motion } from "framer-motion";
+import { container, item } from "../../configs/slideIn";
 
 export const Tokenomics: React.FC<{}> = () => {
     return (
@@ -7,12 +9,18 @@ export const Tokenomics: React.FC<{}> = () => {
             padding={{ mobile: "var(--cardPadding) var(--pagePadding)", laptop: "var(--cardPadding) var(--pagePadding) calc(3 * var(--cardPadding))" }}
         >
             <Box
+                component={motion.div}
+                variants={container}
+                initial={"hidden"}
+                whileInView={"show"}
                 marginLeft={"auto"}
                 marginRight={"auto"}
                 width={{ tablet: "85%", laptop: "80%", desktop: "60%" }}
             >
                 <Typography
                     variant="h2"
+                    component={motion.h2}
+                    variants={item}
                     fontFamily={"Inter"}
                     fontWeight={600}
                     fontSize={{ mobile: 30, miniTablet: 35, tablet: 40, laptop: 47 }}
@@ -29,6 +37,8 @@ export const Tokenomics: React.FC<{}> = () => {
                 </Typography>
                 <Typography
                     variant="body1"
+                    component={motion.p}
+                    variants={item}
                     fontFamily={"Poppins"}
                     fontWeight={400}
                     fontSize={{ mobile: 16 }}
@@ -47,6 +57,10 @@ export const Tokenomics: React.FC<{}> = () => {
                 </Typography>
             </Box>
             <Stack
+                component={motion.div}
+                variants={container}
+                initial={"hidden"}
+                whileInView={"show"}
                 direction={{ tablet: "row" }}
                 gap={"var(--flexGap)"}
                 justifyContent={"space-between"}
@@ -56,6 +70,8 @@ export const Tokenomics: React.FC<{}> = () => {
                     return (
                         <Box
                             key={i}
+                            component={motion.div}
+                            variants={item}
                             bgcolor={"#03291E"}
                             border={"2px solid #091E19"}
                             borderRadius={"16px"}

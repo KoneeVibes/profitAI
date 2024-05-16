@@ -1,4 +1,6 @@
 import { Box, Typography } from "@mui/material";
+import { motion } from "framer-motion";
+import { container, item } from "../../configs/slideIn";
 
 export const Profit: React.FC<{}> = () => {
     return (
@@ -6,12 +8,18 @@ export const Profit: React.FC<{}> = () => {
             padding={"calc(2 * var(--cardPadding)) var(--pagePadding)"}
         >
             <Box
+                component={motion.div}
+                variants={container}
+                initial={"hidden"}
+                whileInView={"show"}
                 marginLeft={"auto"}
                 marginRight={"auto"}
                 width={{ tablet: "85%", laptop: "70%", desktop: "50%" }}
             >
                 <Typography
                     variant="h2"
+                    component={motion.h2}
+                    variants={item}
                     fontFamily={"Inter"}
                     fontWeight={600}
                     fontSize={{ mobile: 30, miniTablet: 35, tablet: 40, laptop: 47 }}
@@ -37,6 +45,8 @@ export const Profit: React.FC<{}> = () => {
                 </Typography>
                 <Typography
                     variant="body1"
+                    component={motion.p}
+                    variants={item}
                     fontFamily={"Poppins"}
                     fontWeight={400}
                     fontSize={{ mobile: 16 }}

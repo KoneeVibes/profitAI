@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Box, Stack, Typography, useMediaQuery } from "@mui/material";
 import { featuredItems } from "../../data";
 import { FeaturedItemsStack } from "./styled";
+import { motion } from "framer-motion";
+import { container, item } from "../../configs/slideIn";
 
 export const FeaturedItems: React.FC<{}> = () => {
     const [shownIndex, setShownIndex] = useState(0);
@@ -17,15 +19,20 @@ export const FeaturedItems: React.FC<{}> = () => {
                 flex={0.5}
                 gap={{ mobile: "calc(1.5 * var(--flexGap))", laptop: "calc(2 * var(--flexGap))" }}
             >
-                {featuredItems.map((item, i) => {
+                {featuredItems.map((featuredItem, i) => {
                     return (
                         <Box
                             key={i}
-                            component={"div"}
+                            component={motion.div}
+                            variants={container}
+                            initial="hidden"
+                            whileInView="show"
                             className="textBox"
                             onMouseEnter={() => setShownIndex(i)}
                         >
                             <Box
+                                component={motion.div}
+                                variants={item}
                                 padding={"calc(var(--cardPadding)/2)"}
                                 bgcolor={"#FFFFFF0A"}
                                 width={smallerScreens ? "auto" : "fit-content"}
@@ -40,11 +47,13 @@ export const FeaturedItems: React.FC<{}> = () => {
                                     color={"#3FFF90"}
                                     whiteSpace={"normal"}
                                 >
-                                    {item.section}
+                                    {featuredItem.section}
                                 </Typography>
                             </Box>
                             <Typography
                                 variant="h3"
+                                component={motion.h3}
+                                variants={item}
                                 fontFamily={"Inter"}
                                 fontWeight={600}
                                 fontSize={{ mobile: 23 }}
@@ -53,10 +62,12 @@ export const FeaturedItems: React.FC<{}> = () => {
                                 whiteSpace={"normal"}
                                 marginBlock={"2rem"}
                             >
-                                {item.title}
+                                {featuredItem.title}
                             </Typography>
                             <Typography
-                                variant="h3"
+                                variant="body1"
+                                component={motion.p}
+                                variants={item}
                                 fontFamily={"Open Sans"}
                                 fontWeight={400}
                                 fontSize={16}
@@ -65,7 +76,7 @@ export const FeaturedItems: React.FC<{}> = () => {
                                 whiteSpace={"normal"}
                                 marginBlockStart={"2rem"}
                             >
-                                {item.body}
+                                {featuredItem.body}
                             </Typography>
                         </Box>
                     )

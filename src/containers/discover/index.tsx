@@ -1,13 +1,21 @@
 import { Box, Typography } from "@mui/material";
 import { BaseButton } from "../../components/button";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { motion } from "framer-motion";
+import { container, item } from "../../configs/slideIn";
 
 export const Discover: React.FC<{}> = () => {
     return (
         <Box
+            component={motion.div}
+            initial="hidden"
+            whileInView="show"
+            variants={container}
             padding={"calc(2 * var(--cardPadding)) var(--pagePadding)"}
         >
             <Box
+                component={motion.div}
+                variants={item}
                 marginLeft={"auto"}
                 marginRight={"auto"}
                 width={{ tablet: "85%", laptop: "80%", desktop: "60%" }}
@@ -39,6 +47,8 @@ export const Discover: React.FC<{}> = () => {
                 </Typography>
             </Box>
             <Typography
+                component={motion.p}
+                variants={item}
                 variant="body1"
                 fontFamily={"Poppins"}
                 fontWeight={400}
@@ -55,6 +65,8 @@ export const Discover: React.FC<{}> = () => {
                 At ProfitAI BOTS, Our vision is to revolutionize the way people access and navigate the world of cryptocurrencies and blockchain technology. We believe that by leveraging the power of artificial intelligence (AI), we can empower users to make informed decisions and harness the full potential of digital assets and blockchain innovations.
             </Typography>
             <Box
+                component={motion.div}
+                variants={item}
                 display={"flex"}
                 justifyContent={"center"}
                 overflow={"hidden"}

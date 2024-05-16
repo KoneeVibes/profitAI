@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import { QandA } from "../../components/q/a";
 import { qanda } from "../../data";
+import { motion } from "framer-motion";
+import { container, item } from "../../configs/slideIn";
 
 export const FAQ: React.FC<{}> = () => {
     useEffect(() => {
@@ -28,12 +30,18 @@ export const FAQ: React.FC<{}> = () => {
             }}
         >
             <Box
+                component={motion.div}
+                variants={container}
+                initial={"hidden"}
+                whileInView={"show"}
                 marginLeft={"auto"}
                 marginRight={"auto"}
                 width={{ tablet: "85%", laptop: "70%", desktop: "50%", xl: "35%" }}
             >
                 <Typography
                     variant="h2"
+                    component={motion.h2}
+                    variants={item}
                     fontFamily={"Inter"}
                     fontWeight={600}
                     fontSize={{ mobile: 30, miniTablet: 35, tablet: 40, laptop: 47 }}
@@ -59,6 +67,8 @@ export const FAQ: React.FC<{}> = () => {
                 </Typography>
                 <Typography
                     variant="body1"
+                    component={motion.p}
+                    variants={item}
                     fontFamily={"Poppins"}
                     fontWeight={400}
                     fontSize={{ mobile: 16 }}
@@ -86,9 +96,15 @@ export const FAQ: React.FC<{}> = () => {
             >
                 <Box
                     flex={0.4}
+                    component={motion.div}
+                    variants={container}
+                    initial={"hidden"}
+                    whileInView={"show"}
                 >
                     <Typography
                         variant="h3"
+                        component={motion.h3}
+                        variants={item}
                         fontFamily={"Inter"}
                         fontWeight={500}
                         fontSize={{ mobile: "20px" }}
@@ -101,6 +117,8 @@ export const FAQ: React.FC<{}> = () => {
                     </Typography>
                     <Typography
                         variant="body1"
+                        component={motion.p}
+                        variants={item}
                         fontFamily={"Open Sans"}
                         fontWeight={400}
                         fontSize={{ mobile: "16px" }}

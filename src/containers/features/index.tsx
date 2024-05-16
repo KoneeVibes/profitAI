@@ -2,6 +2,8 @@ import { Box, Stack, Typography } from "@mui/material";
 import { features } from "../../data";
 import { BaseButton } from "../../components/button";
 import { FeaturedItems } from "../../components/featuredItems";
+import { motion } from "framer-motion";
+import { container, item } from "../../configs/slideIn";
 
 export const Features: React.FC<{}> = () => {
     return (
@@ -18,12 +20,18 @@ export const Features: React.FC<{}> = () => {
             }}
         >
             <Box
+                component={motion.div}
+                variants={container}
+                initial="hidden"
+                whileInView="show"
                 marginLeft={"auto"}
                 marginRight={"auto"}
                 width={{ tablet: "85%", laptop: "80%", desktop: "60%" }}
             >
                 <Typography
                     variant="h2"
+                    component={motion.h2}
+                    variants={item}
                     fontFamily={"Inter"}
                     fontWeight={600}
                     fontSize={{ mobile: 30, miniTablet: 35, tablet: 40, laptop: 47 }}
@@ -49,6 +57,8 @@ export const Features: React.FC<{}> = () => {
                 </Typography>
                 <Typography
                     variant="body1"
+                    component={motion.p}
+                    variants={item}
                     fontFamily={"Poppins"}
                     fontWeight={400}
                     fontSize={{ mobile: 16 }}
@@ -65,10 +75,16 @@ export const Features: React.FC<{}> = () => {
                     Here's a list of things you can do with ProfitAI. These core features are essential in maximizing the potential of ProfitAI for your trades.
                 </Typography>
                 <Box
+                    component={motion.div}
+                    variants={item}
                     display={"flex"}
                     justifyContent={"center"}
                 >
                     <Stack
+                        component={motion.div}
+                        variants={container}
+                        initial={"hidden"}
+                        whileInView={"show"}
                         direction={{ tablet: "row" }}
                         justifyContent={"center"}
                         gap={{ mobile: "calc(var(--flexGap)/2)", tablet: "var(--flexGap)" }}
@@ -79,6 +95,8 @@ export const Features: React.FC<{}> = () => {
                             return (
                                 <BaseButton
                                     key={i}
+                                    component={motion.button}
+                                    variants={item}
                                     location="features"
                                 >
                                     <Typography

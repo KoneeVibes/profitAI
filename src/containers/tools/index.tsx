@@ -1,14 +1,25 @@
+import { useRef } from "react";
 import { Box, Card, CardContent, CardHeader, Grid, Typography } from "@mui/material";
 import { tools } from "../../data";
 import { ToolBox } from "./styled";
-import "../../configs/lightening.css"
+import "../../configs/lightening.css";
+import { motion } from "framer-motion";
+import { container, item } from "../../configs/slideIn";
 
 export const Tools: React.FC<{}> = () => {
+    const scrollRef = useRef(null);
     return (
         <ToolBox>
-            <Box>
+            <Box
+                component={motion.div}
+                variants={container}
+                initial="hidden"
+                whileInView="show"
+            >
                 <Typography
                     variant="h2"
+                    component={motion.h2}
+                    variants={item}
                     fontFamily={"Inter"}
                     fontWeight={600}
                     fontSize={{ mobile: 30, miniTablet: 35, tablet: 40, laptop: 47 }}
@@ -34,6 +45,8 @@ export const Tools: React.FC<{}> = () => {
                 </Typography>
                 <Typography
                     variant="body1"
+                    component={motion.p}
+                    variants={item}
                     fontFamily={"Poppins"}
                     fontWeight={400}
                     fontSize={{ mobile: 16 }}
@@ -64,6 +77,10 @@ export const Tools: React.FC<{}> = () => {
                             tablet={5}
                             desktop={3}
                             className="borderLight"
+                            component={motion.div}
+                            variants={container}
+                            initial={"hidden"}
+                            whileInView={"show"}
                             sx={{
                                 borderRadius: "25px",
                                 overflow: "hidden",
@@ -72,6 +89,7 @@ export const Tools: React.FC<{}> = () => {
                             }}
                         >
                             <Card
+                                ref={scrollRef}
                                 sx={{
                                     backgroundColor: "#00322340",
                                     padding: "calc(var(--cardPadding)/2)",
@@ -79,10 +97,17 @@ export const Tools: React.FC<{}> = () => {
                                 }}
                             >
                                 <CardHeader
+                                    component={motion.div}
+                                    variants={item}
+                                    viewport={{ root: scrollRef }}
                                     className="toolIcon"
                                     avatar={tool.icon}
                                 />
-                                <CardContent>
+                                <CardContent
+                                    component={motion.div}
+                                    variants={item}
+                                    viewport={{ root: scrollRef }}
+                                >
                                     <Typography
                                         variant="subtitle1"
                                         fontFamily={"Open Sans"}

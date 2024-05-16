@@ -3,6 +3,8 @@ import { Box, Card, CardContent, CardHeader, Stack, Typography } from "@mui/mate
 import { partners } from "../../data";
 import { PartnersStack } from "./styled";
 import "../../configs/lightening.css";
+import { motion } from "framer-motion";
+import { container, item } from "../../configs/slideIn";
 
 export const Partners: React.FC<{}> = () => {
     return (
@@ -15,6 +17,10 @@ export const Partners: React.FC<{}> = () => {
                 overflow={"hidden"}
             >
                 <Card
+                    component={motion.div}
+                    variants={container}
+                    initial={"hidden"}
+                    whileInView={"show"}
                     className="borderLight"
                     sx={{
                         flex: 1,
@@ -26,6 +32,8 @@ export const Partners: React.FC<{}> = () => {
                 >
                     <CardHeader
                         // avatar={<Icon />}
+                        component={motion.div}
+                        variants={item}
                         title={
                             <Typography
                                 variant="h2"
@@ -48,8 +56,14 @@ export const Partners: React.FC<{}> = () => {
                         sx={{
                             overflow: "hidden"
                         }}
+                        component={motion.div}
+                        variants={item}
                     >
                         <Stack
+                            component={motion.div}
+                            variants={container}
+                            initial={"hidden"}
+                            whileInView={"show"}
                             direction={{ xl: "row" }}
                             flexWrap={"wrap"}
                             gap={{ mobile: "var(--flexGap)", xl: "calc(var(--flexGap)/2)" }}
@@ -60,6 +74,8 @@ export const Partners: React.FC<{}> = () => {
                                 return (
                                     <Card
                                         key={i}
+                                        component={motion.div}
+                                        variants={item}
                                         sx={{
                                             backgroundColor: "transparent",
                                             flex: `calc(100%/${partners.length})`,
@@ -116,6 +132,10 @@ export const Partners: React.FC<{}> = () => {
                     </CardContent>
                 </Card>
                 <Card
+                    component={motion.div}
+                    variants={container}
+                    initial={"hidden"}
+                    whileInView={"show"}
                     className="borderLight"
                     sx={{
                         flex: 1,
@@ -126,6 +146,8 @@ export const Partners: React.FC<{}> = () => {
                     }}
                 >
                     <CardHeader
+                        component={motion.div}
+                        variants={item}
                         title={
                             <Typography
                                 variant="h2"
@@ -157,7 +179,10 @@ export const Partners: React.FC<{}> = () => {
                             borderImageSlice: 1,
                         }}
                     />
-                    <CardContent>
+                    <CardContent
+                        component={motion.div}
+                        variants={item}
+                    >
                         <Typography
                             variant="body1"
                             fontFamily={"Poppins"}

@@ -1,8 +1,9 @@
 import { Button, ButtonProps, styled } from "@mui/material";
 import { BaseButtonType } from "../../types/app.type";
 import { getButtonStyles } from "../../configs/fontStyles";
+import { MotionProps } from "framer-motion";
 
-export const BaseButton: React.FC<BaseButtonType & Omit<ButtonProps, keyof BaseButtonType>> = styled(Button)<{ location: string }>(
+export const BaseButton = styled(Button)<ButtonProps & BaseButtonType & MotionProps & { location: string }>(
     ({ theme, location }) => {
         return {
             fontFamily: "Open Sans",

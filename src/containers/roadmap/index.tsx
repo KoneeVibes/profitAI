@@ -4,6 +4,8 @@ import { Box, Card, Step, StepLabel, Stepper, Typography } from "@mui/material";
 import { roadmap } from "../../data";
 import { CustomStepIcon } from "./stepIcon";
 import stepperBg from "../../assets/roadmapbg.svg";
+import { motion } from "framer-motion";
+import { container, item } from "../../configs/slideIn";
 
 export const Roadmap: React.FC<{}> = () => {
     useEffect(() => {
@@ -22,12 +24,18 @@ export const Roadmap: React.FC<{}> = () => {
             padding={"calc(2 * var(--cardPadding)) var(--pagePadding)"}
         >
             <Box
+                component={motion.div}
+                variants={container}
+                initial={"hidden"}
+                whileInView={"show"}
                 marginLeft={"auto"}
                 marginRight={"auto"}
                 width={{ tablet: "85%", laptop: "70%", desktop: "50%" }}
             >
                 <Typography
                     variant="h2"
+                    component={motion.h2}
+                    variants={item}
                     fontFamily={"Inter"}
                     fontWeight={600}
                     fontSize={{ mobile: 30, miniTablet: 35, tablet: 40, laptop: 47 }}
@@ -53,6 +61,8 @@ export const Roadmap: React.FC<{}> = () => {
                 </Typography>
                 <Typography
                     variant="body1"
+                    component={motion.p}
+                    variants={item}
                     fontFamily={"Poppins"}
                     fontWeight={400}
                     fontSize={{ mobile: 16 }}
@@ -103,6 +113,10 @@ export const Roadmap: React.FC<{}> = () => {
                                 StepIconComponent={CustomStepIcon}
                             >
                                 <Card
+                                    component={motion.div}
+                                    variants={container}
+                                    initial={"hidden"}
+                                    whileInView={"show"}
                                     sx={{
                                         background: "linear-gradient(91.81deg, rgba(32, 56, 51, 0.5) 0%, rgba(2, 29, 21, 0) 100%)",
                                         borderRadius: "16px",
@@ -111,6 +125,8 @@ export const Roadmap: React.FC<{}> = () => {
                                 >
                                     <Typography
                                         variant="h3"
+                                        component={motion.h3}
+                                        variants={item}
                                         fontFamily={"Inter"}
                                         fontWeight={600}
                                         fontSize={{ mobile: "30px" }}
@@ -120,9 +136,16 @@ export const Roadmap: React.FC<{}> = () => {
                                     >
                                         {milestone.title}
                                     </Typography>
-                                    <Box>
+                                    <Box
+                                        component={motion.div}
+                                        variants={container}
+                                        initial={"hidden"}
+                                        whileInView={"show"}
+                                    >
                                         <Typography
                                             variant="body1"
+                                            component={motion.p}
+                                            variants={item}
                                             fontFamily={"Open Sans"}
                                             fontWeight={400}
                                             fontSize={{ mobile: "16px" }}
@@ -135,6 +158,8 @@ export const Roadmap: React.FC<{}> = () => {
                                         </Typography>
                                         <Typography
                                             variant="body1"
+                                            component={motion.p}
+                                            variants={item}
                                             fontFamily={"Open Sans"}
                                             fontWeight={400}
                                             fontSize={{ mobile: "16px" }}

@@ -1,6 +1,7 @@
-import { Stack, styled } from "@mui/material";
+import { Stack, StackProps, styled } from "@mui/material";
+import { MotionProps } from "framer-motion";
 
-export const QandAStack = styled(Stack)(
+export const QandAStack = styled(Stack)<StackProps & MotionProps>(
     ({ theme }) => {
         return {
             padding: "var(--cardPadding)",

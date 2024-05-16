@@ -6,6 +6,8 @@ import { TypeAnimation } from "react-type-animation";
 import { HeaderImg } from "../../assets";
 import { HeroStack } from "./style";
 import { BaseButton } from "../button";
+import { motion } from "framer-motion";
+import { container, item } from "../../configs/slideIn";
 
 export const Hero: React.FC<{}> = () => {
     const matches = useMediaQuery('(min-width: 580px) and (max-width: 1023px)');
@@ -62,6 +64,10 @@ export const Hero: React.FC<{}> = () => {
                 </Typography>
                 <Typography
                     variant="body1"
+                    component={motion.p}
+                    variants={container}
+                    initial={"hidden"}
+                    whileInView={"show"}
                     fontFamily={"Open Sans"}
                     fontWeight={400}
                     fontSize={16}
@@ -77,12 +83,18 @@ export const Hero: React.FC<{}> = () => {
                 </Typography>
                 <Stack
                     className="callToAction"
+                    component={motion.div}
+                    variants={container}
+                    initial={"hidden"}
+                    whileInView={"show"}
                     direction={{ mobile: matches ? "row" : "column", tablet: "row" }}
                     gap={"calc(var(--flexGap)/2)"}
                     padding={"0 0 4rem"}
                 >
                     <BaseButton
                         location="heroLeft"
+                        component={motion.button}
+                        variants={item}
                         endIcon={<ArrowForwardIcon />}
                     >
                         <Typography
@@ -99,6 +111,8 @@ export const Hero: React.FC<{}> = () => {
                     </BaseButton>
                     <BaseButton
                         location="heroRight"
+                        component={motion.button}
+                        variants={item}
                         startIcon={<VideocamIcon />}
                     >
                         <Typography
