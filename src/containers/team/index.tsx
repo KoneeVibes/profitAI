@@ -2,6 +2,8 @@ import { Box, Card, CardHeader, Stack, Typography } from "@mui/material";
 import teamBg from "../../assets/teamBg.svg";
 import { team } from "../../data";
 import { TeamBox } from "./styled";
+import { motion } from "framer-motion";
+import { container, item } from "../../configs/slideIn";
 
 export const Team: React.FC<{}> = () => {
     return (
@@ -17,9 +19,16 @@ export const Team: React.FC<{}> = () => {
                 minHeight: "70.5rem"
             }}
         >
-            <Box>
+            <Box
+                component={motion.div}
+                variants={container}
+                initial={"hidden"}
+                whileInView={"show"}
+            >
                 <Typography
                     variant="h2"
+                    component={motion.h2}
+                    variants={item}
                     fontFamily={"Inter"}
                     fontWeight={600}
                     fontSize={{ mobile: 30, miniTablet: 35, tablet: 40, laptop: 47 }}
@@ -45,6 +54,8 @@ export const Team: React.FC<{}> = () => {
                 </Typography>
                 <Typography
                     variant="body1"
+                    component={motion.div}
+                    variants={item}
                     fontFamily={"Poppins"}
                     fontWeight={400}
                     fontSize={{ mobile: 16 }}
