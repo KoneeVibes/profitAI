@@ -94,8 +94,8 @@ export const Pricing: React.FC<{}> = () => {
                 overflow={"hidden"}
             >
                 <Card
-                    component={"div"}
                     id="free"
+                    className="borderLight"
                     sx={{
                         flex: 1,
                         background: "#03291E",
@@ -121,6 +121,8 @@ export const Pricing: React.FC<{}> = () => {
                                 color={"#FFFFFF"}
                                 textTransform={"uppercase"}
                                 marginBlock={"1rem"}
+                                component={motion.h3}
+                                variants={item}
                             >
                                 Free
                             </Typography>
@@ -134,6 +136,8 @@ export const Pricing: React.FC<{}> = () => {
                                 lineHeight={"normal"}
                                 color={"#3FFF90"}
                                 whiteSpace={"normal"}
+                                component={motion.h6}
+                                variants={item}
                             >
                                 0% <Typography
                                     component={"span"}
@@ -149,11 +153,19 @@ export const Pricing: React.FC<{}> = () => {
                                 </Typography>
                             </Typography>
                         }
+                        component={motion.div}
+                        variants={container}
+                        initial={"hidden"}
+                        whileInView={"show"}
                         sx={{
                             borderBottom: "1px solid #FFFFFF1A",
                         }}
                     />
                     <CardContent
+                        component={motion.div}
+                        variants={container}
+                        initial={"hidden"}
+                        whileInView={"show"}
                         sx={{
                             height: "100%",
                             display: "flex",
@@ -168,6 +180,8 @@ export const Pricing: React.FC<{}> = () => {
                                     gap={"0.5rem"}
                                     direction={"row"}
                                     overflow={"hidden"}
+                                    component={motion.div}
+                                    variants={item}
                                 >
                                     <CheckMark style={{ flexShrink: 0 }} />
                                     <Typography
@@ -188,12 +202,18 @@ export const Pricing: React.FC<{}> = () => {
                         <Box
                             overflow={"hidden"}
                             marginBlockStart={"2rem"}
+                            component={motion.div}
+                            variants={container}
+                            initial={"hidden"}
+                            whileInView={"show"}
                         >
                             <BaseButton
                                 location="pricing"
                                 sx={{
                                     width: "100%"
                                 }}
+                                component={motion.button}
+                                variants={item}
                             >
                                 <Typography
                                     variant="button"
@@ -213,6 +233,7 @@ export const Pricing: React.FC<{}> = () => {
                 <Card
                     component={"div"}
                     id="premium"
+                    className="borderLight"
                     sx={{
                         flex: 1,
                         background: "#03291E",
@@ -236,6 +257,8 @@ export const Pricing: React.FC<{}> = () => {
                                 lineHeight={"normal"}
                                 textTransform={"uppercase"}
                                 marginBlock={"1rem"}
+                                component={motion.h3}
+                                variants={item}
                                 sx={{
                                     backgroundImage: "linear-gradient(90deg, #3FFF90 0%, #B0DC73 51.5%, #58E794 100%)",
                                     backgroundClip: "text",
@@ -255,6 +278,8 @@ export const Pricing: React.FC<{}> = () => {
                                 lineHeight={"normal"}
                                 color={"#3FFF90"}
                                 whiteSpace={"normal"}
+                                component={motion.h6}
+                                variants={item}
                             >
                                 1% <Typography
                                     component={"span"}
@@ -270,11 +295,19 @@ export const Pricing: React.FC<{}> = () => {
                                 </Typography>
                             </Typography>
                         }
+                        component={motion.div}
+                        variants={container}
+                        initial={"hidden"}
+                        whileInView={"show"}
                         sx={{
                             borderBottom: "1px solid #FFFFFF1A",
                         }}
                     />
                     <CardContent
+                        component={motion.div}
+                        variants={container}
+                        initial={"hidden"}
+                        whileInView={"show"}
                         sx={{
                             height: "100%",
                             display: "flex",
@@ -289,6 +322,8 @@ export const Pricing: React.FC<{}> = () => {
                                     gap={"0.5rem"}
                                     direction={"row"}
                                     overflow={"hidden"}
+                                    component={motion.div}
+                                    variants={item}
                                 >
                                     <CheckMark style={{ flexShrink: 0 }} />
                                     <Typography
@@ -315,6 +350,8 @@ export const Pricing: React.FC<{}> = () => {
                             color={"#3FFF90"}
                             whiteSpace={"normal"}
                             marginBlockEnd={"1rem"}
+                            component={motion.p}
+                            variants={item}
                         >
                             3 ways to access premium features
                         </Typography>
@@ -325,10 +362,16 @@ export const Pricing: React.FC<{}> = () => {
                                     gap={"0.5rem"}
                                     direction={"row"}
                                     overflow={"hidden"}
+                                    component={motion.div}
+                                    variants={container}
+                                    initial={"hidden"}
+                                    whileInView={"show"}
                                 >
                                     <Tick style={{ flexShrink: 0 }} />
                                     <Typography
                                         variant="body1"
+                                        component={motion.p}
+                                        variants={item}
                                         fontFamily={"Open Sans"}
                                         fontWeight={400}
                                         fontSize={{ mobile: "16px" }}
@@ -345,12 +388,18 @@ export const Pricing: React.FC<{}> = () => {
                         <Box
                             overflow={"hidden"}
                             marginBlockStart={"2rem"}
+                            component={motion.div}
+                            variants={container}
+                            initial={"hidden"}
+                            whileInView={"show"}
                         >
                             <BaseButton
                                 location="pricing"
                                 sx={{
                                     width: "100%"
                                 }}
+                                component={motion.button}
+                                variants={item}
                             >
                                 <Typography
                                     variant="button"

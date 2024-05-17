@@ -4,6 +4,7 @@ import { team } from "../../data";
 import { TeamBox } from "./styled";
 import { motion } from "framer-motion";
 import { container, item } from "../../configs/slideIn";
+import "./lightening.css";
 
 export const Team: React.FC<{}> = () => {
     return (
@@ -95,36 +96,47 @@ export const Team: React.FC<{}> = () => {
                                 boxShadow: "none",
                                 flexGrow: 1,
                             }}
+                            className="memberCard"
                         >
                             <CardHeader
-                                title={
-                                    <Typography
-                                        variant="h3"
-                                        fontFamily={"Open Sans"}
-                                        fontWeight={600}
-                                        fontSize={{ mobile: "20px" }}
-                                        lineHeight={"normal"}
-                                        whiteSpace={"normal"}
-                                        color={"#FFFFFF"}
-                                        textAlign={"center"}
-                                    >
-                                        {member.name}
-                                    </Typography>
-                                }
                                 avatar={member.headshot}
-                                subheader={
-                                    <Typography
-                                        variant="subtitle1"
-                                        fontFamily={"Open Sans"}
-                                        fontWeight={400}
-                                        fontSize={{ mobile: "14px" }}
-                                        lineHeight={"normal"}
-                                        whiteSpace={"normal"}
-                                        color={"#FFFFFF99"}
-                                        textAlign={"center"}
+                                title={
+                                    <Box
+                                        overflow={"hidden"}
                                     >
-                                        {member.title}
-                                    </Typography>
+                                        <Typography
+                                            variant="h3"
+                                            fontFamily={"Open Sans"}
+                                            fontWeight={600}
+                                            fontSize={{ mobile: "20px" }}
+                                            lineHeight={"normal"}
+                                            whiteSpace={"normal"}
+                                            color={"#FFFFFF"}
+                                            textAlign={"center"}
+                                            padding={"0 2rem"}
+                                        >
+                                            {member.name}
+                                        </Typography>
+                                    </Box>
+                                }
+                                subheader={
+                                    <Box
+                                        overflow={"hidden"}
+                                    >
+                                        <Typography
+                                            variant="subtitle1"
+                                            fontFamily={"Open Sans"}
+                                            fontWeight={400}
+                                            fontSize={{ mobile: "14px" }}
+                                            lineHeight={"normal"}
+                                            whiteSpace={"normal"}
+                                            color={"#FFFFFF99"}
+                                            textAlign={"center"}
+                                            padding={"2rem 2rem 0"}
+                                        >
+                                            {member.title}
+                                        </Typography>
+                                    </Box>
                                 }
                             />
                         </Card>
