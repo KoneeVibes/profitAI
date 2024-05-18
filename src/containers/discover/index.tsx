@@ -7,10 +7,11 @@ import { container, item } from "../../configs/verticalSlideIn";
 export const Discover: React.FC<{}> = () => {
     return (
         <Box
+            id="discover"
             component={motion.div}
+            variants={container}
             initial="hidden"
             whileInView="show"
-            variants={container}
             padding={"calc(2 * var(--cardPadding)) var(--pagePadding) var(--cardPadding)"}
         >
             <Box

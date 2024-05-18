@@ -9,7 +9,9 @@ import { container, item } from "../../configs/verticalSlideIn";
 export const Tools: React.FC<{}> = () => {
     const scrollRef = useRef(null);
     return (
-        <ToolBox>
+        <ToolBox
+            id="tools"
+        >
             <Box
                 component={motion.div}
                 variants={container}

@@ -7,27 +7,27 @@ export const navLinks = [
     },
     {
         name: "About",
-        url: "#"
+        url: "/#discover"
     },
     {
         name: "Features",
-        url: "#"
+        url: "/#features"
     },
     {
         name: "Tools",
-        url: "#"
+        url: "/#tools"
     },
     {
         name: "Partners",
-        url: "#"
+        url: "/#partners"
     },
     {
         name: "Team",
-        url: "#"
+        url: "/#team"
     },
     {
         name: "Other",
-        url: "#"
+        url: "/#FAQ"
     },
 ]
 

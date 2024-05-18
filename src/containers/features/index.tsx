@@ -8,6 +8,8 @@ import { container, item } from "../../configs/verticalSlideIn";
 export const Features: React.FC<{}> = () => {
     return (
         <Box
+            id="features"
+            component={"div"}
             margin={"0 var(--pagePadding)"}
             padding={"calc(2 * var(--cardPadding)) 0"}
             overflow={"hidden"}

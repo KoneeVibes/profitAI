@@ -24,7 +24,13 @@ export const Navbar: React.FC<{}> = () => {
         setOpenMenu(false);
         navigate("/");
     }
-    
+
+    const scrollWithOffset = (el: any) => {
+        const yCoordinate = el.getBoundingClientRect().top + window.scrollY;
+        const yOffset = -65; //to account for maxNavheight
+        window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
+    }
+
     return (
         <Nav
             direction={{ mobile: "row" }}
@@ -50,6 +56,8 @@ export const Navbar: React.FC<{}> = () => {
                                 key={i}
                                 to={navLink.url}
                                 smooth={true}
+                                scroll={(el) => scrollWithOffset(el)}
+                                onClick={() => setOpenMenu(false)}
                             >
                                 <Typography
                                     variant="subtitle1"

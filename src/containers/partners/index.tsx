@@ -9,6 +9,8 @@ import { leftChild, leftParent, rightChild, rightParent } from "../../configs/ho
 export const Partners: React.FC<{}> = () => {
     return (
         <Box
+            id="partners"
+            component={"div"}
             padding={"0 var(--pagePadding)"}
         >
             <PartnersStack

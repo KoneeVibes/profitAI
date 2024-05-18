@@ -22,6 +22,8 @@ export const FAQ: React.FC<{}> = () => {
     }, []);
     return (
         <Box
+            id={"FAQ"}
+            component={"div"}
             padding={"calc(2 * var(--cardPadding)) var(--pagePadding)"}
             sx={{
                 borderBottom: "1px solid",
