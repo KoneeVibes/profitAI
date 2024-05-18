@@ -13,6 +13,7 @@ import { Pricing } from './containers/pricing';
 import { Profit } from './containers/profit';
 import { FAQ } from './containers/FAQ';
 import { Footer } from './containers/footer';
+import { Certificate } from './containers/certificate';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <Header />
       <Clients />
       <Discover />
+      <Certificate />
       <Features />
       <Tools />
       <Partners />

@@ -11,7 +11,7 @@ export const Discover: React.FC<{}> = () => {
             initial="hidden"
             whileInView="show"
             variants={container}
-            padding={"calc(2 * var(--cardPadding)) var(--pagePadding)"}
+            padding={"calc(2 * var(--cardPadding)) var(--pagePadding) var(--cardPadding)"}
         >
             <Box
                 component={motion.div}
@@ -22,6 +22,8 @@ export const Discover: React.FC<{}> = () => {
             >
                 <Typography
                     variant="h2"
+                    component={motion.h2}
+                    variants={item}
                     fontFamily={"poppins"}
                     fontWeight={600}
                     fontSize={{ mobile: 30, miniTablet: 35, tablet: 40, laptop: 47 }}

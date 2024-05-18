@@ -28,3 +28,4 @@ export { ReactComponent as TelegramIcon } from "./telegramIcon.svg";
 export { ReactComponent as TwitterIcon } from "./twitterIcon.svg";
 export { ReactComponent as YoutubeIcon } from "./youtubeIcon.svg";
 export { ReactComponent as GithubIcon } from "./githubIcon.svg";
+export { ReactComponent as CertificateImg } from "./certificate.svg";
