@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { container, item } from "../../configs/slideIn";
+import { Uniswap } from "../../components/uniswap";
 
 export const Profit: React.FC<{}> = () => {
     return (
@@ -63,11 +64,7 @@ export const Profit: React.FC<{}> = () => {
                     On UniSwap
                 </Typography>
             </Box>
-            <Box
-                height={"360px"}
-            >
-
-            </Box>
+            <Uniswap />
         </Box>
     )
 }
