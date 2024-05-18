@@ -11,7 +11,7 @@ const leftParent = {
 }
 
 const rightParent = {
-    hidden: { opacity: 0, transform: "translateX(1Ovh%)" },
+    hidden: { opacity: 0, transform: "translateX(1Ovh)" },
     show: {
         opacity: 1,
         transform: "translateX(0)",
