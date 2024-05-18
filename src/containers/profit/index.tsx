@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
-import { container, item } from "../../configs/slideIn";
+import { container, item } from "../../configs/verticalSlideIn";
 import { Uniswap } from "../../components/uniswap";
 
 export const Profit: React.FC<{}> = () => {

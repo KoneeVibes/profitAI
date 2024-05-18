@@ -3,7 +3,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import { QandA } from "../../components/q/a";
 import { qanda } from "../../data";
 import { motion } from "framer-motion";
-import { container, item } from "../../configs/slideIn";
+import { container, item } from "../../configs/verticalSlideIn";
 
 export const FAQ: React.FC<{}> = () => {
     useEffect(() => {

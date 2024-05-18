@@ -11,8 +11,8 @@ const container = {
 }
 
 const item = {
-    hidden: { opacity: 0, transform: "translate(0, 10vh)" },
-    show: { opacity: 1, transform: "translate(0, 0)" }
+    hidden: { opacity: 0, transform: "translateY(10vh)" },
+    show: { opacity: 1, transform: "translateY(0)" }
 }
 
 export {

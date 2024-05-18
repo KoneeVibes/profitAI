@@ -3,7 +3,7 @@ import { QandAStack } from "./styled";
 import AddIcon from '@mui/icons-material/Add';
 import { QandAProps } from "../../../types/app.type";
 import { motion } from "framer-motion";
-import { container, item } from "../../../configs/slideIn";
+import { container, item } from "../../../configs/verticalSlideIn";
 
 export const QandA: React.FC<QandAProps> = ({ question, answer }) => {
     return (

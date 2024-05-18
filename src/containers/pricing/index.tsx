@@ -5,7 +5,7 @@ import { BaseButton } from "../../components/button";
 import { PricingBox } from "./styled";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { container, item } from "../../configs/slideIn";
+import { container, item } from "../../configs/verticalSlideIn";
 
 export const Pricing: React.FC<{}> = () => {
     useEffect(() => {

@@ -5,7 +5,7 @@ import { roadmap } from "../../data";
 import { CustomStepIcon } from "./stepIcon";
 import stepperBg from "../../assets/roadmapbg.svg";
 import { motion } from "framer-motion";
-import { container, item } from "../../configs/slideIn";
+import { container, item } from "../../configs/verticalSlideIn";
 
 export const Roadmap: React.FC<{}> = () => {
     useEffect(() => {

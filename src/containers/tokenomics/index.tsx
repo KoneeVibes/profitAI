@@ -1,7 +1,7 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { tokenomics } from "../../data";
 import { motion } from "framer-motion";
-import { container, item } from "../../configs/slideIn";
+import { container, item } from "../../configs/verticalSlideIn";
 
 export const Tokenomics: React.FC<{}> = () => {
     return (

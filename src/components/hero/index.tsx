@@ -7,7 +7,7 @@ import { HeaderImg } from "../../assets";
 import { HeroStack } from "./style";
 import { BaseButton } from "../button";
 import { motion } from "framer-motion";
-import { container, item } from "../../configs/slideIn";
+import { container, item } from "../../configs/verticalSlideIn";
 
 export const Hero: React.FC<{}> = () => {
     const matches = useMediaQuery('(min-width: 580px) and (max-width: 1023px)');

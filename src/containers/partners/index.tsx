@@ -4,7 +4,7 @@ import { partners } from "../../data";
 import { PartnersStack } from "./styled";
 import "../../configs/lightening.css";
 import { motion } from "framer-motion";
-import { container, item } from "../../configs/slideIn";
+import { leftChild, leftParent, rightChild, rightParent } from "../../configs/horizontalSlideIn";
 
 export const Partners: React.FC<{}> = () => {
     return (
@@ -18,7 +18,7 @@ export const Partners: React.FC<{}> = () => {
             >
                 <Card
                     component={motion.div}
-                    variants={container}
+                    variants={leftParent}
                     initial={"hidden"}
                     whileInView={"show"}
                     className="borderLight"
@@ -33,7 +33,7 @@ export const Partners: React.FC<{}> = () => {
                     <CardHeader
                         // avatar={<Icon />}
                         component={motion.div}
-                        variants={item}
+                        variants={leftChild}
                         title={
                             <Typography
                                 variant="h2"
@@ -57,11 +57,11 @@ export const Partners: React.FC<{}> = () => {
                             overflow: "hidden"
                         }}
                         component={motion.div}
-                        variants={item}
+                        variants={leftChild}
                     >
                         <Stack
                             component={motion.div}
-                            variants={container}
+                            variants={leftParent}
                             initial={"hidden"}
                             whileInView={"show"}
                             direction={{ xl: "row" }}
@@ -75,7 +75,7 @@ export const Partners: React.FC<{}> = () => {
                                     <Card
                                         key={i}
                                         component={motion.div}
-                                        variants={item}
+                                        variants={leftChild}
                                         sx={{
                                             backgroundColor: "transparent",
                                             flex: `calc(100%/${partners.length})`,
@@ -133,7 +133,7 @@ export const Partners: React.FC<{}> = () => {
                 </Card>
                 <Card
                     component={motion.div}
-                    variants={container}
+                    variants={rightParent}
                     initial={"hidden"}
                     whileInView={"show"}
                     className="borderLight"
@@ -147,7 +147,7 @@ export const Partners: React.FC<{}> = () => {
                 >
                     <CardHeader
                         component={motion.div}
-                        variants={item}
+                        variants={rightChild}
                         title={
                             <Typography
                                 variant="h2"
@@ -181,7 +181,7 @@ export const Partners: React.FC<{}> = () => {
                     />
                     <CardContent
                         component={motion.div}
-                        variants={item}
+                        variants={rightChild}
                     >
                         <Typography
                             variant="body1"

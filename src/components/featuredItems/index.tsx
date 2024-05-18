@@ -3,7 +3,7 @@ import { Box, Stack, Typography, useMediaQuery } from "@mui/material";
 import { featuredItems } from "../../data";
 import { FeaturedItemsStack } from "./styled";
 import { motion } from "framer-motion";
-import { container, item } from "../../configs/slideIn";
+import { container, item } from "../../configs/verticalSlideIn";
 
 export const FeaturedItems: React.FC<{}> = () => {
     const [shownIndex, setShownIndex] = useState(0);

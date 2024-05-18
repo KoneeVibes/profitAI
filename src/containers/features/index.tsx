@@ -3,7 +3,7 @@ import { features } from "../../data";
 import { BaseButton } from "../../components/button";
 import { FeaturedItems } from "../../components/featuredItems";
 import { motion } from "framer-motion";
-import { container, item } from "../../configs/slideIn";
+import { container, item } from "../../configs/verticalSlideIn";
 
 export const Features: React.FC<{}> = () => {
     return (

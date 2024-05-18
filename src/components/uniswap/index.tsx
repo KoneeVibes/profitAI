@@ -30,7 +30,6 @@ export const Uniswap: React.FC<{}> = () => {
                 console.error('Please install MetaMask!');
             }
         }
-
         connectWallet();
     }, []);
 

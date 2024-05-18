@@ -4,7 +4,7 @@ import { tools } from "../../data";
 import { ToolBox } from "./styled";
 import "../../configs/lightening.css";
 import { motion } from "framer-motion";
-import { container, item } from "../../configs/slideIn";
+import { container, item } from "../../configs/verticalSlideIn";
 
 export const Tools: React.FC<{}> = () => {
     const scrollRef = useRef(null);

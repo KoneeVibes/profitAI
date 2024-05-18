@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import { BaseButton } from "../../components/button";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { motion } from "framer-motion";
-import { container, item } from "../../configs/slideIn";
+import { container, item } from "../../configs/verticalSlideIn";
 
 export const Discover: React.FC<{}> = () => {
     return (

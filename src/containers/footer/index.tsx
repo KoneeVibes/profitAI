@@ -3,7 +3,7 @@ import { footerLinks, socialMedia } from "../../data";
 import { BaseButton } from "../../components/button";
 import TelegramIcon from '@mui/icons-material/Telegram';
 import { motion } from "framer-motion";
-import { container, item } from "../../configs/slideIn";
+import { container, item } from "../../configs/verticalSlideIn";
 
 export const Footer: React.FC<{}> = () => {
     const matches = useMediaQuery('(max-width:280px)');
