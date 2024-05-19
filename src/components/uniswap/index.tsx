@@ -5,11 +5,6 @@ import { UniswapBox } from "./styled";
 import { ethers } from 'ethers';
 import detectEthereumProvider from '@metamask/detect-provider';
 
-interface MetaMaskEthereumProvider {
-    isMetaMask?: boolean;
-    request?: (args: { method: string, params?: Array<any> }) => Promise<any>;
-}
-
 export const Uniswap: React.FC<{}> = () => {
     const infuraId = process.env.REACT_APP_INFURA_ID;
     const jsonRpcEndpoint = `https://mainnet.infura.io/v3/${infuraId}`;
@@ -22,7 +17,7 @@ export const Uniswap: React.FC<{}> = () => {
 
     useEffect(() => {
         async function connectWallet() {
-            const ethereumProvider: MetaMaskEthereumProvider | null = await detectEthereumProvider() as MetaMaskEthereumProvider | null;
+            const ethereumProvider: any = await detectEthereumProvider();
             if (ethereumProvider && ethereumProvider.request) {
                 await ethereumProvider.request({ method: 'eth_requestAccounts' });
                 const provider = new ethers.providers.Web3Provider(ethereumProvider);
