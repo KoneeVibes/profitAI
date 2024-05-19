@@ -86,6 +86,7 @@ export const Tokenomics: React.FC<{}> = () => {
                                 lineHeight={"normal"}
                                 color={"#FFFFFF"}
                                 textAlign={"center"}
+                                whiteSpace={"normal"}
                                 marginBlockEnd={"0.5rem"}
                             >
                                 {token.name}
@@ -98,8 +99,9 @@ export const Tokenomics: React.FC<{}> = () => {
                                 lineHeight={"normal"}
                                 color={"#FFFFFF99"}
                                 textAlign={"center"}
+                                whiteSpace={"normal"}
                             >
-                                {token.name}
+                                {token.subtext}
                             </Typography>
                         </Box>
                     )

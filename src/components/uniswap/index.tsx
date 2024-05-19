@@ -5,10 +5,15 @@ import { UniswapBox } from "./styled";
 import { ethers } from 'ethers';
 import detectEthereumProvider from '@metamask/detect-provider';
 
+interface MetaMaskEthereumProvider {
+    isMetaMask?: boolean;
+    request?: (args: { method: string, params?: Array<any> }) => Promise<any>;
+}
+
 export const Uniswap: React.FC<{}> = () => {
     const infuraId = process.env.REACT_APP_INFURA_ID;
     const jsonRpcEndpoint = `https://mainnet.infura.io/v3/${infuraId}`;
-    const jsonRpcProvider: any = new ethers.JsonRpcProvider(jsonRpcEndpoint);
+    const jsonRpcProvider = new ethers.providers.JsonRpcProvider(jsonRpcEndpoint);
 
     const [account, setAccount] = useState({
         address: '',
@@ -17,14 +22,15 @@ export const Uniswap: React.FC<{}> = () => {
 
     useEffect(() => {
         async function connectWallet() {
-            const ethereumProvider: any = await detectEthereumProvider();
+            const ethereumProvider: MetaMaskEthereumProvider | null = await detectEthereumProvider() as MetaMaskEthereumProvider | null;
             if (ethereumProvider && ethereumProvider.request) {
-                const browserProvider = new ethers.BrowserProvider(ethereumProvider);
-                const accounts = await browserProvider.send("eth_requestAccounts", []);
-                const address = accounts[0];
+                await ethereumProvider.request({ method: 'eth_requestAccounts' });
+                const provider = new ethers.providers.Web3Provider(ethereumProvider);
+                const signer = provider.getSigner();
+                const address = await signer.getAddress();
                 setAccount({
                     address: address,
-                    provider: browserProvider as any,
+                    provider: provider,
                 });
             } else {
                 console.error('Please install MetaMask!');
@@ -40,5 +46,5 @@ export const Uniswap: React.FC<{}> = () => {
                 provider={account.provider}
             />
         </UniswapBox>
-    )
+    );
 }
