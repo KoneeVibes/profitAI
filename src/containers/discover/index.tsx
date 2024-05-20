@@ -69,7 +69,7 @@ export const Discover: React.FC<{}> = () => {
                         textWrap: { mobile: "balance", tablet: "pretty" }
                     }}
                 >
-                    At ProfitAI BOTS, Our vision is to revolutionize the way people access and navigate the world of cryptocurrencies and blockchain technology. We believe that by leveraging the power of artificial intelligence (AI), we can empower users to make informed decisions and harness the full potential of digital assets and blockchain.
+                    At ProfitAI BOTS, Our vision is to revolutionize the way people access and navigate the world of cryptocurrencies and blockchain technology. We believe that by leveraging the power of artificial intelligence (AI), we can empower users to make informed decisions and harness the full potential of digital assets and blockchain innovations.
                 </Typography>
                 <Box
                     component={motion.div}
