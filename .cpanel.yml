@@ -1,6 +1,6 @@
 ---
 deployment:
  tasks:
- - export DEPLOYPATH=/home/profitai/public_html/
+ - export DEPLOYPATH=/home2/profitai/public_html/
  - /bin/cp -R /home2/profitai/repositories/profitAI/build/* $DEPLOYPATH
  
