@@ -7,7 +7,7 @@ export const PartnersStack = styled(Stack)(
                 overflow: "hidden",
             },
             "& .MuiCardHeader-avatar": {
-                width: "100%",
+                flex: "0 1 auto",
                 overflow: "hidden"
             }
         }

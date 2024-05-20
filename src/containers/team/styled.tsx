@@ -13,6 +13,7 @@ export const TeamBox = styled(Box)(
                 overflow: "hidden",
                 width: "100%",
                 padding: "var(--cardPadding)",
+                borderRadius: "25px",
             },
             "& .MuiCardHeader-avatar": {
                 overflow: "hidden",
@@ -24,6 +25,9 @@ export const TeamBox = styled(Box)(
                         height: "auto",
                     }
                 }
+            },
+            "& .MuiCard-root:hover .MuiCardHeader-content": {
+                border: "1px solid #3FFF90"
             }
         }
     }

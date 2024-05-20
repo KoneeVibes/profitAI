@@ -4,7 +4,6 @@ import { team } from "../../data";
 import { TeamBox } from "./styled";
 import { motion } from "framer-motion";
 import { container, item } from "../../configs/verticalSlideIn";
-import "./lightening.css";
 
 export const Team: React.FC<{}> = () => {
     return (
@@ -97,7 +96,6 @@ export const Team: React.FC<{}> = () => {
                                 boxShadow: "none",
                                 flexGrow: 1,
                             }}
-                            className="memberCard"
                         >
                             <CardHeader
                                 avatar={member.headshot}

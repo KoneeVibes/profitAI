@@ -6,6 +6,7 @@ import { CustomStepIcon } from "./stepIcon";
 import stepperBg from "../../assets/roadmapbg.svg";
 import { motion } from "framer-motion";
 import { container, item } from "../../configs/verticalSlideIn";
+import { leftChild, leftParent, rightChild, rightParent } from "../../configs/horizontalSlideIn";
 
 export const Roadmap: React.FC<{}> = () => {
     useEffect(() => {
@@ -114,7 +115,7 @@ export const Roadmap: React.FC<{}> = () => {
                             >
                                 <Card
                                     component={motion.div}
-                                    variants={container}
+                                    variants={(i % 2 === 0) ? leftParent : rightParent}
                                     initial={"hidden"}
                                     whileInView={"show"}
                                     sx={{
@@ -126,7 +127,7 @@ export const Roadmap: React.FC<{}> = () => {
                                     <Typography
                                         variant="h3"
                                         component={motion.h3}
-                                        variants={item}
+                                        variants={(i % 2 === 0) ? leftChild : rightChild}
                                         fontFamily={"Inter"}
                                         fontWeight={600}
                                         fontSize={{ mobile: "30px" }}
@@ -138,14 +139,14 @@ export const Roadmap: React.FC<{}> = () => {
                                     </Typography>
                                     <Box
                                         component={motion.div}
-                                        variants={container}
+                                        variants={(i % 2 === 0) ? leftParent : rightParent}
                                         initial={"hidden"}
                                         whileInView={"show"}
                                     >
                                         <Typography
                                             variant="body1"
                                             component={motion.p}
-                                            variants={item}
+                                            variants={(i % 2 === 0) ? leftChild : rightChild}
                                             fontFamily={"Open Sans"}
                                             fontWeight={400}
                                             fontSize={{ mobile: "16px" }}
@@ -159,7 +160,7 @@ export const Roadmap: React.FC<{}> = () => {
                                         <Typography
                                             variant="body1"
                                             component={motion.p}
-                                            variants={item}
+                                            variants={(i % 2 === 0) ? leftChild : rightChild}
                                             fontFamily={"Open Sans"}
                                             fontWeight={400}
                                             fontSize={{ mobile: "16px" }}
@@ -177,6 +178,6 @@ export const Roadmap: React.FC<{}> = () => {
                     )
                 })}
             </Stepper>
-        </RoadmapBox>
+        </RoadmapBox >
     )
 }

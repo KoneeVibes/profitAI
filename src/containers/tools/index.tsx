@@ -2,7 +2,6 @@ import { useRef } from "react";
 import { Box, Card, CardContent, CardHeader, Grid, Typography } from "@mui/material";
 import { tools } from "../../data";
 import { ToolBox } from "./styled";
-import "../../configs/lightening.css";
 import { motion } from "framer-motion";
 import { container, item } from "../../configs/verticalSlideIn";
 
@@ -78,7 +77,6 @@ export const Tools: React.FC<{}> = () => {
                             mobile={12}
                             tablet={5}
                             desktop={3}
-                            className="borderLight"
                             component={motion.div}
                             variants={container}
                             initial={"hidden"}
@@ -88,6 +86,9 @@ export const Tools: React.FC<{}> = () => {
                                 overflow: "hidden",
                                 maxWidth: "100% !important",
                                 flexGrow: "1 !important",
+                                "&:hover": {
+                                    border: "1px solid #3FFF90"
+                                }
                             }}
                         >
                             <Card

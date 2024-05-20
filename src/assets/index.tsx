@@ -19,6 +19,7 @@ export { ReactComponent as Presale } from "./presaleBot.svg";
 export { ReactComponent as Dev } from "./devBot.svg";
 export { ReactComponent as MEV } from "./MEVBot.svg";
 export { ReactComponent as Icon } from "./icon.svg";
+export { ReactComponent as BigIcon } from "./bigIcon.svg";
 export { ReactComponent as AmazonLogo } from "./amazonLogo.svg";
 export { ReactComponent as UniswapLogo } from "./uniswapLogo.svg";
 export { ReactComponent as CoinMarketCapLogo } from "./coinmarketcapLogo.svg";

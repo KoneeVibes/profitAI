@@ -1,5 +1,5 @@
 import { Box, Card, CardContent, CardHeader, Stack, Typography } from "@mui/material";
-// import { Icon } from "../../assets";
+import { Icon } from "../../assets";
 import { partners } from "../../data";
 import { PartnersStack } from "./styled";
 import "../../configs/lightening.css";
@@ -23,17 +23,19 @@ export const Partners: React.FC<{}> = () => {
                     variants={leftParent}
                     initial={"hidden"}
                     whileInView={"show"}
-                    className="borderLight"
                     sx={{
                         flex: 1,
                         backgroundColor: "#00322340",
                         padding: "calc(var(--cardPadding)/2)",
                         borderRadius: "30px",
-                        boxShadow: "none"
+                        boxShadow: "none",
+                        "&:hover": {
+                            border: "1px solid #3FFF90"
+                        }
                     }}
                 >
                     <CardHeader
-                        // avatar={<Icon />}
+                        avatar={<Icon />}
                         component={motion.div}
                         variants={leftChild}
                         title={
@@ -138,13 +140,15 @@ export const Partners: React.FC<{}> = () => {
                     variants={rightParent}
                     initial={"hidden"}
                     whileInView={"show"}
-                    className="borderLight"
                     sx={{
                         flex: 1,
                         backgroundColor: "#00322340",
                         padding: "calc(var(--cardPadding)/2)",
                         borderRadius: "30px",
                         boxShadow: "none",
+                        "&:hover": {
+                            border: "1px solid #3FFF90"
+                        }
                     }}
                 >
                     <CardHeader
@@ -197,7 +201,7 @@ export const Partners: React.FC<{}> = () => {
                         >
                             Highlighting ProfitAI's Web2 partner integrations and their significant impact on our product is crucial. With numerous partnerships, it's vital to understand each one's specific benefits.<br /><span style={{ display: "block", height: "2rem" }} />
 
-                            These partnerships enhance Website AI's development and future brand visibility. Amazon AWS, Uniswap, and CoinMarketCap are seamlessly integrated into our dApp, optimizing efficiency.
+                            These partnerships enhance profitAi's development and future brand visibility. Amazon AWS, Uniswap, and CoinMarketCap are seamlessly integrated into our dApp, optimizing efficiency.
                         </Typography>
                     </CardContent>
                 </Card>

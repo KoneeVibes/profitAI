@@ -2,21 +2,19 @@ import { Box, Typography } from "@mui/material";
 import { BaseButton } from "../../components/button";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { motion } from "framer-motion";
-import { container, item } from "../../configs/verticalSlideIn";
+import { leftChild, leftParent, rightChild, rightParent } from "../../configs/horizontalSlideIn";
 
 export const Discover: React.FC<{}> = () => {
     return (
         <Box
             id="discover"
-            component={motion.div}
-            variants={container}
-            initial="hidden"
-            whileInView="show"
             padding={"calc(2 * var(--cardPadding)) var(--pagePadding) var(--cardPadding)"}
         >
             <Box
                 component={motion.div}
-                variants={item}
+                variants={leftParent}
+                initial="hidden"
+                whileInView="show"
                 marginLeft={"auto"}
                 marginRight={"auto"}
                 width={{ tablet: "85%", laptop: "80%", desktop: "60%" }}
@@ -24,7 +22,7 @@ export const Discover: React.FC<{}> = () => {
                 <Typography
                     variant="h2"
                     component={motion.h2}
-                    variants={item}
+                    variants={leftChild}
                     fontFamily={"poppins"}
                     fontWeight={600}
                     fontSize={{ mobile: 30, miniTablet: 35, tablet: 40, laptop: 47 }}
@@ -49,48 +47,61 @@ export const Discover: React.FC<{}> = () => {
                     </Typography>, the future of trading crypto.
                 </Typography>
             </Box>
-            <Typography
-                component={motion.p}
-                variants={item}
-                variant="body1"
-                fontFamily={"Poppins"}
-                fontWeight={400}
-                fontSize={16}
-                lineHeight={"normal"}
-                color={"#FFFFFF99"}
-                textAlign={"center"}
-                whiteSpace={"normal"}
-                marginBlock={"2rem"}
-                sx={{
-                    textWrap: { mobile: "balance", tablet: "pretty" }
-                }}
-            >
-                At ProfitAI BOTS, Our vision is to revolutionize the way people access and navigate the world of cryptocurrencies and blockchain technology. We believe that by leveraging the power of artificial intelligence (AI), we can empower users to make informed decisions and harness the full potential of digital assets and blockchain innovations.
-            </Typography>
             <Box
                 component={motion.div}
-                variants={item}
-                display={"flex"}
-                justifyContent={"center"}
-                overflow={"hidden"}
+                variants={rightParent}
+                initial="hidden"
+                whileInView="show"
             >
-                <BaseButton
-                    location="discover"
-                    endIcon={<ArrowForwardIcon />}
+                <Typography
+                    variant="body1"
+                    component={motion.p}
+                    variants={rightChild}
+                    fontFamily={"Poppins"}
+                    fontWeight={400}
+                    fontSize={16}
+                    lineHeight={"normal"}
+                    color={"#FFFFFF99"}
+                    textAlign={"center"}
+                    whiteSpace={"normal"}
+                    marginBlock={"2rem"}
+                    sx={{
+                        textWrap: { mobile: "balance", tablet: "pretty" }
+                    }}
                 >
-                    <Typography
-                        variant="button"
-                        fontFamily={"inherit"}
-                        fontWeight={"inherit"}
-                        fontSize={"inherit"}
-                        lineHeight={"inherit"}
-                        color={"inherit"}
-                        textTransform={"inherit"}
+                    At ProfitAI BOTS, Our vision is to revolutionize the way people access and navigate the world of cryptocurrencies and blockchain technology. We believe that by leveraging the power of artificial intelligence (AI), we can empower users to make informed decisions and harness the full potential of digital assets and blockchain innovations.
+                </Typography>
+                <Box
+                    component={motion.div}
+                    variants={rightChild}
+                    display={"flex"}
+                    justifyContent={"center"}
+                    overflow={"hidden"}
+                >
+                    <BaseButton
+                        location="discover"
+                        component={motion.div}
+                        variants={rightParent}
+                        initial="hidden"
+                        whileInView="show"
+                        endIcon={<ArrowForwardIcon />}
                     >
-                        Get Started
-                    </Typography>
-                </BaseButton>
+                        <Typography
+                            variant="button"
+                            component={motion.p}
+                            variants={rightChild}
+                            fontFamily={"inherit"}
+                            fontWeight={"inherit"}
+                            fontSize={"inherit"}
+                            lineHeight={"inherit"}
+                            color={"inherit"}
+                            textTransform={"inherit"}
+                        >
+                            Get Started
+                        </Typography>
+                    </BaseButton>
+                </Box>
             </Box>
-        </Box>
+        </Box >
     )
 }

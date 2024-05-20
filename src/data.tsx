@@ -1,4 +1,4 @@
-import { Amazon, AmazonLogo, CoinMarketCap, CoinMarketCapLogo, CopyAI, CopyTrading, Dev, Github, GithubIcon, Icon, MEV, Medium, Presale, Signal, Signals, Sniper, Sniping, Telegram, TelegramBots, TelegramIcon, Twitter, TwitterIcon, Uniswap, UniswapLogo, YouTube, YoutubeIcon } from "./assets"
+import { Amazon, AmazonLogo, CoinMarketCap, CoinMarketCapLogo, CopyAI, CopyTrading, Dev, Github, GithubIcon, BigIcon, MEV, Medium, Presale, Signal, Signals, Sniper, Sniping, Telegram, TelegramBots, TelegramIcon, Twitter, TwitterIcon, Uniswap, UniswapLogo, YouTube, YoutubeIcon } from "./assets"
 
 export const navLinks = [
     {
@@ -161,17 +161,17 @@ export const team = [
     {
         title: "CEO",
         name: "Harmony  Tim",
-        headshot: <Icon />
+        headshot: <BigIcon />
     },
     {
         title: "COO",
-        name: "ITYB schew",
-        headshot: <Icon />
+        name: "DJenmarketer",
+        headshot: <BigIcon />
     },
     {
         title: "CM",
         name: "BROWNY Jones",
-        headshot: <Icon />
+        headshot: <BigIcon />
     }
 ];
 

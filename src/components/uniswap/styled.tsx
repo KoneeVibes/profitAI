@@ -1,6 +1,7 @@
-import { Box, styled } from "@mui/material";
+import { Box, BoxProps, styled } from "@mui/material";
+import { MotionProps } from "framer-motion";
 
-export const UniswapBox = styled(Box)(
+export const UniswapBox = styled(Box)<BoxProps & MotionProps>(
     ({ theme }) => {
         return {
             display: "flex",

@@ -95,7 +95,6 @@ export const Pricing: React.FC<{}> = () => {
             >
                 <Card
                     id="free"
-                    className="borderLight"
                     sx={{
                         flex: 1,
                         background: "#03291E",
@@ -108,6 +107,10 @@ export const Pricing: React.FC<{}> = () => {
                         justifyContent: "space-between",
                         transform: { laptop: "scale(0.8)" },
                         transition: "all .3s",
+                        "&:hover": {
+                            border: "1px solid #3FFF90",
+                            zIndex: 10,
+                        }
                     }}
                 >
                     <CardHeader
@@ -233,7 +236,6 @@ export const Pricing: React.FC<{}> = () => {
                 <Card
                     component={"div"}
                     id="premium"
-                    className="borderLight"
                     sx={{
                         flex: 1,
                         background: "#03291E",
@@ -245,6 +247,9 @@ export const Pricing: React.FC<{}> = () => {
                         flexDirection: "column",
                         justifyContent: "space-between",
                         transition: "all .3s ease-in-out",
+                        "&:hover": {
+                            border: "1px solid #3FFF90"
+                        }
                     }}
                 >
                     <CardHeader

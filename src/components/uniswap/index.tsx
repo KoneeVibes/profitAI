@@ -4,6 +4,8 @@ import '@uniswap/widgets/fonts.css';
 import { UniswapBox } from "./styled";
 import { ethers } from 'ethers';
 import detectEthereumProvider from '@metamask/detect-provider';
+import { motion } from 'framer-motion';
+import { rightChild } from '../../configs/horizontalSlideIn';
 
 export const Uniswap: React.FC<{}> = () => {
     const infuraId = process.env.REACT_APP_INFURA_ID;
@@ -35,7 +37,10 @@ export const Uniswap: React.FC<{}> = () => {
     }, []);
 
     return (
-        <UniswapBox>
+        <UniswapBox
+            component={motion.div}
+            variants={rightChild}
+        >
             <SwapWidget
                 className="widget"
                 provider={account.provider}

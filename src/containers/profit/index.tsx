@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
-import { container, item } from "../../configs/verticalSlideIn";
 import { Uniswap } from "../../components/uniswap";
+import { leftChild, leftParent, rightParent } from "../../configs/horizontalSlideIn";
 
 export const Profit: React.FC<{}> = () => {
     return (
@@ -10,7 +10,7 @@ export const Profit: React.FC<{}> = () => {
         >
             <Box
                 component={motion.div}
-                variants={container}
+                variants={leftParent}
                 initial={"hidden"}
                 whileInView={"show"}
                 marginLeft={"auto"}
@@ -20,7 +20,7 @@ export const Profit: React.FC<{}> = () => {
                 <Typography
                     variant="h2"
                     component={motion.h2}
-                    variants={item}
+                    variants={leftChild}
                     fontFamily={"Inter"}
                     fontWeight={600}
                     fontSize={{ mobile: 30, miniTablet: 35, tablet: 40, laptop: 47 }}
@@ -47,7 +47,7 @@ export const Profit: React.FC<{}> = () => {
                 <Typography
                     variant="body1"
                     component={motion.p}
-                    variants={item}
+                    variants={leftChild}
                     fontFamily={"Poppins"}
                     fontWeight={400}
                     fontSize={{ mobile: 16 }}
@@ -64,7 +64,14 @@ export const Profit: React.FC<{}> = () => {
                     On UniSwap
                 </Typography>
             </Box>
-            <Uniswap />
+            <Box
+                component={motion.div}
+                variants={rightParent}
+                initial={"hidden"}
+                whileInView={"show"}
+            >
+                <Uniswap />
+            </Box>
         </Box>
     )
 }
