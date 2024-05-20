@@ -1,0 +1,1 @@
+(self.webpackChunkprofitai=self.webpackChunkprofitai||[]).push([[891],{84445:()=>{},50477:()=>{},51786:()=>{},15340:()=>{},79838:()=>{},78942:()=>{}}]);
