@@ -9,6 +9,7 @@ import { rightChild } from '../../configs/horizontalSlideIn';
 
 export const Uniswap: React.FC<{}> = () => {
     const infuraId = process.env.REACT_APP_INFURA_ID;
+    const tokenList = process.env.REACT_APP_TOKEN_LIST;
     const jsonRpcEndpoint = `https://mainnet.infura.io/v3/${infuraId}`;
     const jsonRpcProvider = new ethers.providers.JsonRpcProvider(jsonRpcEndpoint);
 
@@ -44,6 +45,7 @@ export const Uniswap: React.FC<{}> = () => {
             <SwapWidget
                 className="widget"
                 provider={account.provider}
+                tokenList={tokenList}
             />
         </UniswapBox>
     );

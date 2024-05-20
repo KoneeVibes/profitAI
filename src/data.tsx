@@ -178,7 +178,7 @@ export const team = [
 export const tokenomics = [
     {
         name: "Taxes",
-        subtext: "4/4"
+        subtext: "5/5"
     },
     {
         name: "Max Wallet",

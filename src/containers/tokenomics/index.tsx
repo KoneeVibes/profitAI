@@ -53,7 +53,7 @@ export const Tokenomics: React.FC<{}> = () => {
                         overflowWrap: "anywhere",
                     }}
                 >
-                    0xc73abe8d7a0da644743fe2ad24f4e16bb7ed43f8
+                    {/* contract address to enter here */}
                 </Typography>
             </Box>
             <Stack
