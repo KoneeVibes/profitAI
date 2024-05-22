@@ -34,11 +34,11 @@ export const navLinks = [
 export const smIcons = [
     {
         icon: <Telegram />,
-        url: "#"
+        url: "https://t.me/Profits_Ai"
     },
     {
         icon: <Twitter />,
-        url: "#"
+        url: "https://x.com/Profits_AI?t=WzQFuosNpHCBP8C5VwCxWg&s=09"
     },
     {
         icon: <Github />,

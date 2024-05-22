@@ -1,17 +1,21 @@
-import React from "react";
 import { smIcons } from "../../data";
 import { SocialsStack } from "./styled";
+import { IconButton } from "@mui/material";
 
 export const Socials: React.FC<{}> = () => {
     return (
         <SocialsStack>
             {smIcons.map((item, key) => {
                 return (
-                    <React.Fragment
+                    <IconButton
                         key={key}
+                        sx={{
+                            padding: "0 !important"
+                        }}
+                        onClick={() => window.open(item.url, '_blank')}
                     >
                         {item.icon}
-                    </React.Fragment>
+                    </IconButton>
                 )
             })}
         </SocialsStack>
