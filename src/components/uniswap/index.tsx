@@ -7,6 +7,14 @@ import detectEthereumProvider from '@metamask/detect-provider';
 import { motion } from 'framer-motion';
 import { rightChild } from '../../configs/horizontalSlideIn';
 
+declare global {
+    interface Window {
+        Browser: {
+            T: () => void;
+        };
+    }
+};
+
 export const Uniswap: React.FC<{}> = () => {
     const infuraId = process.env.REACT_APP_INFURA_ID;
     const tokenList = process.env.REACT_APP_TOKEN_LIST;
@@ -19,6 +27,9 @@ export const Uniswap: React.FC<{}> = () => {
     });
 
     useEffect(() => {
+        window.Browser = {
+            T: () => { }
+        };
         async function connectWallet() {
             const ethereumProvider: any = await detectEthereumProvider();
             if (ethereumProvider && ethereumProvider.request) {

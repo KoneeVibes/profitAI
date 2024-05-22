@@ -328,7 +328,7 @@ export const footerLinks = {
     "Support": [
         {
             name: "GitBook",
-            url: ""
+            url: "https://profit-ai-1.gitbook.io/profit-ai-whitepaper/"
         },
         {
             name: "Bot",
