@@ -1,4 +1,4 @@
-import { Amazon, AmazonLogo, CoinMarketCap, CoinMarketCapLogo, CopyAI, CopyTrading, Dev, Github, GithubIcon, BigIcon, MEV, Medium, Presale, Signal, Signals, Sniper, Sniping, Telegram, TelegramBots, TelegramIcon, Twitter, TwitterIcon, Uniswap, UniswapLogo, YouTube, YoutubeIcon } from "./assets"
+import { Amazon, AmazonLogo, CoinMarketCap, CoinMarketCapLogo, CopyAI, CopyTrading, Dev, Github, GithubIcon, BigIcon, MEV, Medium, Presale, Signal, Signals, Sniper, Sniping, Telegram, TelegramBots, TelegramIcon, Twitter, TwitterIcon, Uniswap, UniswapLogo, YouTube, YoutubeIcon, Gmail, GmailIcon } from "./assets"
 
 export const navLinks = [
     {
@@ -37,6 +37,10 @@ export const smIcons = [
         url: "https://t.me/Profits_Ai"
     },
     {
+        icon: <Gmail />,
+        url: "mailto:info@profitaitech.com"
+    },
+    {
         icon: <Twitter />,
         url: "https://x.com/Profits_AI?t=WzQFuosNpHCBP8C5VwCxWg&s=09"
     },
@@ -51,7 +55,7 @@ export const smIcons = [
     {
         icon: <YouTube />,
         url: "#"
-    }
+    },
 ]
 
 export const clients = [
@@ -341,6 +345,10 @@ export const socialMedia = [
     {
         icon: <TelegramIcon />,
         url: "https://t.me/Profits_Ai"
+    },
+    {
+        icon: <GmailIcon />,
+        url: "mailto:info@profitaitech.com"
     },
     {
         icon: <TwitterIcon />,
