@@ -165,7 +165,7 @@ export const team = [
     },
     {
         title: "COO",
-        name: "DJenmarketer",
+        name: "ITYB schew",
         headshot: <BigIcon />
     },
     {
