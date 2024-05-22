@@ -4,11 +4,13 @@ import { BaseButton } from "../../components/button";
 import TelegramIcon from '@mui/icons-material/Telegram';
 import { motion } from "framer-motion";
 import { container, item } from "../../configs/verticalSlideIn";
+import { HashLink } from "react-router-hash-link";
+import { FooterBox } from "./styled";
 
 export const Footer: React.FC<{}> = () => {
     const matches = useMediaQuery('(max-width:280px)');
     return (
-        <Box
+        <FooterBox
             padding={"calc(2 * var(--cardPadding)) var(--pagePadding)"}
         >
             <Stack
@@ -91,20 +93,25 @@ export const Footer: React.FC<{}> = () => {
                                 >
                                     {group[1].map((link, i) => {
                                         return (
-                                            <Typography
+                                            <HashLink
                                                 key={i}
-                                                component={"a"}
-                                                fontFamily={"Open Sans"}
-                                                fontWeight={400}
-                                                fontSize={"16px"}
-                                                lineHeight={"normal"}
-                                                color={"#FFFFFF99"}
-                                                sx={{
-                                                    cursor: "pointer"
-                                                }}
+                                                to={link.url}
+                                                smooth={true}
                                             >
-                                                {link.name}
-                                            </Typography>
+                                                <Typography
+                                                    variant="subtitle1"
+                                                    fontFamily={"Open Sans"}
+                                                    fontWeight={400}
+                                                    fontSize={"16px"}
+                                                    lineHeight={"normal"}
+                                                    color={"#FFFFFF99"}
+                                                    sx={{
+                                                        cursor: "pointer"
+                                                    }}
+                                                >
+                                                    {link.name}
+                                                </Typography>
+                                            </HashLink>
                                         )
                                     })}
                                 </Stack>
@@ -167,6 +174,7 @@ export const Footer: React.FC<{}> = () => {
                                     border: "1px solid #FFFFFF14",
                                     height: "fit-content"
                                 }}
+                                onClick={() => window.open(medium.url, '_blank')}
                             >
                                 {medium.icon}
                             </IconButton>
@@ -174,6 +182,6 @@ export const Footer: React.FC<{}> = () => {
                     })}
                 </Stack>
             </Stack>
-        </Box>
+        </FooterBox>
     )
 }

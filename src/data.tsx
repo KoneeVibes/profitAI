@@ -121,7 +121,7 @@ export const tools = [
     },
     {
         index: "04",
-        title: "ProfitAI Presale Bot",
+        title: "ProfitPad",
         body: "ProfitAI presale bot automates token purchases during highly sought-after presales, swiftly completing checkouts on various launchpads to increase profit chances effortlessly.",
         icon: <Presale />
     },
@@ -306,11 +306,11 @@ export const footerLinks = {
     "Quick links": [
         {
             name: "About Us",
-            url: ""
+            url: "/#discover"
         },
         {
             name: "Features",
-            url: ""
+            url: "/#features"
         },
         {
             name: "KYC",
@@ -332,7 +332,7 @@ export const footerLinks = {
         },
         {
             name: "FAQs",
-            url: ""
+            url: "/#FAQ"
         },
     ]
 };
@@ -340,11 +340,11 @@ export const footerLinks = {
 export const socialMedia = [
     {
         icon: <TelegramIcon />,
-        url: ""
+        url: "https://t.me/Profits_Ai"
     },
     {
         icon: <TwitterIcon />,
-        url: ""
+        url: "https://x.com/Profits_AI?t=WzQFuosNpHCBP8C5VwCxWg&s=09"
     },
     {
         icon: <GithubIcon />,
