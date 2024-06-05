@@ -113,7 +113,7 @@ export const tools = [
     },
     {
         index: "02",
-        title: "Multi-Chain Copy Trading AI",
+        title: "Multi-Chain Copier Ai",
         body: "Copy trading AI replicates successful traders' strategies, no advanced skills required. Benefit from expert traders effortlessly. Revolutionize your trading with ProfitAI.",
         icon: <CopyAI />
     },
@@ -239,14 +239,14 @@ export const roadmap = [
         objective: ""
     },
     {
-        title: "Q4 2024: Diversification and Ecosystem Building",
-        focus: "✅ ProfitAI aims to solidify its position as a comprehensive trading suite, offering a wider array of tools and building a robust ecosystem.",
-        objective: "🔥 Key Objectives: Explore advanced trading strategies and tools (e.g., arbitrage bots). Develop staking or yield generation mechanisms for token holders. Foster collaboration with other web3 projects to create synergies. "
-    },
-    {
         title: "Q3 2024: Refinement and Strategic Growth",
         focus: "✅ With a live platform, emphasis shifts towards polishing user experience, establishing partnerships, and planning further expansion",
         objective: "🔥 Key Objectives: Enhance UI/UX based on early user feedback, ensuring seamless interaction. Initiate partnerships with data providers and analytics tools to enrich the platform. Research and develop additional complementary products and services for future rollout."
+    },
+    {
+        title: "Q4 2024: Diversification and Ecosystem Building",
+        focus: "✅ ProfitAI aims to solidify its position as a comprehensive trading suite, offering a wider array of tools and building a robust ecosystem.",
+        objective: "🔥 Key Objectives: Explore advanced trading strategies and tools (e.g., arbitrage bots). Develop staking or yield generation mechanisms for token holders. Foster collaboration with other web3 projects to create synergies. "
     },
     {
         placeholder: true,
