@@ -12,6 +12,7 @@ import { Context } from "../../context";
 export const Navbar: React.FC<{}> = () => {
     const navigate = useNavigate();
     const { openMenu, setOpenMenu } = useContext(Context);
+    const telegramUrl = "https://t.me/Profits_Ai";
 
     useEffect(() => {
         if (openMenu) {
@@ -23,6 +24,11 @@ export const Navbar: React.FC<{}> = () => {
     const handleLogoClick = () => {
         setOpenMenu(false);
         navigate("/");
+    }
+    const routeToTelegram = () => {
+        setOpenMenu(false);
+        window.open(telegramUrl, '_blank');
+
     }
 
     const scrollWithOffset = (el: any) => {
@@ -83,6 +89,7 @@ export const Navbar: React.FC<{}> = () => {
                 >
                     <BaseButton
                         location="nav"
+                        onClick={routeToTelegram}
                     >
                         <Typography
                             variant="button"
