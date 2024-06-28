@@ -200,7 +200,7 @@ export const tokenomics = [
 
 export const roadmap = [
     {
-        title: "Q4 2023: Laying the Groundwork",
+        title: "PHASE 1: Laying the Groundwork",
         focus: "✅ This foundational quarter marks the genesis of ProfitAI, focusing on development, team building, and early community formation",
         objective: "🔥 Key Objectives: Solidify the core architecture and design of the trading bot platform. Build a skilled development team with expertise in blockchain and automated trading. Initiate social media presence and begin cultivating an early adopter community."
     },
@@ -217,12 +217,12 @@ export const roadmap = [
         objective: ""
     },
     {
-        title: "Q1 2024: Building Core Functionality and Securing Funding",
+        title: "PHASE 2: Building Core Functionality and Securing Funding",
         focus: "✅ The focus shifts to developing essential trading bot features and successfully raising capital to fuel project growth.",
         objective: "🔥 Complete Phase 1 of ETH trading bots, including basic buy / sell automation.Conduct a successful private sale round to secure necessary funding.Design and finalize the tokenomics model for the project's native token."
     },
     {
-        title: "Q2 2024: Launch and Rapid Expansion",
+        title: "PHASE 3: Launch and Rapid Expansion",
         focus: "✅ This pivotal quarter sees the official launch of ProfitAI and a period of accelerated feature development",
         objective: "🔥 Key Objectives: Public launch of the ProfitAI platform with initial ETH trading functionality. Integrate Solana trading bot capabilities, broadening market reach. Introduce the groundbreaking AI Copy-trading feature, differentiating ProfitAI. Begin the process of securing listings on prominent centralized exchanges (CEXs)."
     },
@@ -239,12 +239,12 @@ export const roadmap = [
         objective: ""
     },
     {
-        title: "Q3 2024: Refinement and Strategic Growth",
+        title: "PHASE 4: Refinement and Strategic Growth",
         focus: "✅ With a live platform, emphasis shifts towards polishing user experience, establishing partnerships, and planning further expansion",
         objective: "🔥 Key Objectives: Enhance UI/UX based on early user feedback, ensuring seamless interaction. Initiate partnerships with data providers and analytics tools to enrich the platform. Research and develop additional complementary products and services for future rollout."
     },
     {
-        title: "Q4 2024: Diversification and Ecosystem Building",
+        title: "PHASE 5: Diversification and Ecosystem Building",
         focus: "✅ ProfitAI aims to solidify its position as a comprehensive trading suite, offering a wider array of tools and building a robust ecosystem.",
         objective: "🔥 Key Objectives: Explore advanced trading strategies and tools (e.g., arbitrage bots). Develop staking or yield generation mechanisms for token holders. Foster collaboration with other web3 projects to create synergies. "
     },
@@ -261,7 +261,7 @@ export const roadmap = [
         objective: ""
     },
     {
-        title: "PHASE 2 (2025 and beyond)",
+        title: "PHASE 6",
         focus: "✅ This focuses on continuous upgrade in line with our mission of providing Ai powered tools that aids profitability and security in crypto currency trading.",
         objective: ""
     }

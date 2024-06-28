@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.55ef0f00.css",
-    "main.js": "/static/js/main.baf04d74.js",
+    "main.js": "/static/js/main.adb4b89a.js",
     "static/js/891.9c781cad.chunk.js": "/static/js/891.9c781cad.chunk.js",
     "static/js/866.23b7521c.chunk.js": "/static/js/866.23b7521c.chunk.js",
     "static/js/44.b2dcd9be.chunk.js": "/static/js/44.b2dcd9be.chunk.js",
@@ -117,7 +117,7 @@
     "static/media/gmailIcon.svg": "/static/media/gmailIcon.9ca9182057221b721244409b9a7e2e9b.svg",
     "static/media/tick.svg": "/static/media/tick.4975fa3a9ec49a1eb5c07fa29a3ae0c6.svg",
     "main.55ef0f00.css.map": "/static/css/main.55ef0f00.css.map",
-    "main.baf04d74.js.map": "/static/js/main.baf04d74.js.map",
+    "main.adb4b89a.js.map": "/static/js/main.adb4b89a.js.map",
     "866.23b7521c.chunk.js.map": "/static/js/866.23b7521c.chunk.js.map",
     "44.b2dcd9be.chunk.js.map": "/static/js/44.b2dcd9be.chunk.js.map",
     "632.0657227b.chunk.js.map": "/static/js/632.0657227b.chunk.js.map",
@@ -159,6 +159,6 @@
   },
   "entrypoints": [
     "static/css/main.55ef0f00.css",
-    "static/js/main.baf04d74.js"
+    "static/js/main.adb4b89a.js"
   ]
 }
