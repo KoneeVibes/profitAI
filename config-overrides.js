@@ -1,5 +1,5 @@
 const webpack = require('webpack');
-module.exports = function override(config, env) {
+module.exports = function override(config) {
     config.resolve.fallback = {
         url: require.resolve('url'),
         fs: false,
@@ -19,5 +19,13 @@ module.exports = function override(config, env) {
         }),
     );
     config.ignoreWarnings = [/Failed to parse source map/];
+    config.module.rules.push({
+        test: /\.(js|mjs|jsx)$/,
+        enforce: "pre",
+        loader: require.resolve("source-map-loader"),
+        resolve: {
+            fullySpecified: false,
+        },
+    });
     return config;
 }
