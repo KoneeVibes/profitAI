@@ -125,14 +125,14 @@ export const tools = [
     },
     {
         index: "04",
-        title: "ProfitPad",
-        body: "ProfitAI presale bot automates token purchases during highly sought-after presales, swiftly completing checkouts on various launchpads to increase profit chances effortlessly.",
+        title: "ProfitPAD",
+        body: "ProfitPAD automates smart contract creation and deployment using NLP and code generation. Features include code generation, templates, syntax checking, testing, deployment guidance, and monitoring.",
         icon: <Presale />
     },
     {
         index: "05",
-        title: "Contract Dev Bot",
-        body: "ProfitAI Contract Dev Ai automates smart contract creation and deployment using NLP and code generation. Features include code generation, templates, syntax checking, testing, deployment guidance, and monitoring.",
+        title: "KOL AI",
+        body: "Enables Smart analysis and trade on KOL call across multiple chains, channels and platforms. You can now trade narrative without having to find them and having to battle with late entry. All can be traded with few preset clicks.",
         icon: <Dev />
     },
     {
