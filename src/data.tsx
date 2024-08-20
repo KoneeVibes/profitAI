@@ -126,7 +126,7 @@ export const tools = [
     {
         index: "04",
         title: "ProfitPAD",
-        body: "ProfitPAD automates smart contract creation and deployment using NLP and code generation. Features include code generation, templates, syntax checking, testing, deployment guidance, and monitoring.",
+        body: "Profit.PAD automates smart contract creation and deployment using NLP and code generation. Features include code generation, templates, syntax checking, testing, deployment guidance, and monitoring.",
         icon: <Presale />
     },
     {
