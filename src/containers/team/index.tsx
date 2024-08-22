@@ -113,6 +113,10 @@ export const Team: React.FC<{}> = () => {
                                             color={"#FFFFFF"}
                                             textAlign={"center"}
                                             padding={"0 2rem"}
+                                            sx={{
+                                                cursor: "pointer"
+                                            }}
+                                            onClick={() => window.open(member.url, '_blank')}
                                         >
                                             {member.name}
                                         </Typography>

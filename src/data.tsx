@@ -165,17 +165,20 @@ export const team = [
     {
         title: "CEO",
         name: "Harmony  Tim",
-        headshot: <BigIcon />
+        headshot: <BigIcon />,
+        url: "https://x.com/Dev_Harmony_?t=qpebH6AjgYpbd8KjfoNm7g&s=09"
     },
     {
         title: "COO",
         name: "ITYB schew",
-        headshot: <BigIcon />
+        headshot: <BigIcon />,
+        url: "#"
     },
     {
         title: "CM",
         name: "BROWNY Jones",
-        headshot: <BigIcon />
+        headshot: <BigIcon />,
+        url: "#"
     }
 ];
 
