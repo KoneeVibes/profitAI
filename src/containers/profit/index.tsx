@@ -41,7 +41,7 @@ export const Profit: React.FC<{}> = () => {
                         fontSize={"inherit"}
                         lineHeight={"inherit"}
                     >
-                        $PROFIT
+                        $PIAI
                     </Typography>
                 </Typography>
                 <Typography

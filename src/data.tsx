@@ -170,7 +170,7 @@ export const team = [
     },
     {
         title: "COO",
-        name: "ITYB schew",
+        name: "Neobull",
         headshot: <BigIcon />,
         url: "#"
     },
@@ -193,7 +193,7 @@ export const tokenomics = [
     },
     {
         name: "Total Supply",
-        subtext: "1,000,000"
+        subtext: "10,000,000"
     },
     {
         name: "Liquidity Lock",
@@ -278,10 +278,10 @@ export const pricing = {
     },
     premium: {
         features: [
-            "0% Trading fees", "Access to COPY TRADE AI", "Access to bribery Sniping.", "Access to premium presale with multiple X features", "Higher Revshare %", "Get premium subscription now",
+            "Acess to top performing KOL leaderboard", "Access advanced speed KOL copy trading", "Access to bribery sniping", "Access to top tier KOL insider group", "Higher Revshare %", "Get premium subscription now",
         ],
         qualifiers: [
-            "be among the first 100 bot users for 30 consecutive times with a minimum $200  per trade", "Refer 30 active bot users", "Own 10,000 $Profit"
+            "be among the first 100 bot users for 30 consecutive times with a minimum $200  per trade", "Refer 30 active bot users", "Own 10,000 $PIAI"
         ]
     }
 }
