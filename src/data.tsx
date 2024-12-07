@@ -80,8 +80,8 @@ export const features = [
 export const featuredItems = [
     {
         section: "ProfitAi Dapp",
-        title: "Sniping (incl. presales)",
-        body: "We combine real-time market analysis with AI-driven insights to enable precise sniping and pre-sales trading strategies. We empower users to capitalize on fleeting market opportunities with optimal timing, reducing risk and maximizing returns. Join us to experience intelligent trading at your fingertips.",
+        title: "KOL Analyzing",
+        body: "It acts as a bridge between data and strategy, enabling users to make confident, informed decisions while leveraging the expertise of top crypto traders.",
         img: <Sniping />
     },
     {
@@ -98,8 +98,8 @@ export const featuredItems = [
     },
     {
         section: "Telegram Bot",
-        title: "Copy Trading AI",
-        body: "You can effortlessly follow top traders and replicate their strategies in real time. Our advanced AI algorithms identify skilled traders based on performance metrics, allowing you to diversify your portfolio and maximize potential returns.",
+        title: "KOL Copy Trading",
+        body: "The KOL Copy Trading Feature empowers both beginner and seasoned traders to leverage expert strategies effortlessly, creating a dynamic and collaborative trading experience in the Web3 space.",
         img: <CopyTrading />,
     }
 ]
@@ -107,38 +107,38 @@ export const featuredItems = [
 export const tools = [
     {
         index: "01",
-        title: "Multi-chain Sniper Bot",
-        body: "The Multi-chain and Sniper Bot features of ProfitAI have all the essentials you need when it comes to trading in multiple chains and decentralized exchanges.",
+        title: "KOL Tracking",
+        body: "The KOL Tracking Feature of ProfitAI is designed to empower traders by leveraging the expertise and strategies of key opinion leaders (KOLs) in the crypto trading space.",
         icon: <Sniper />
     },
     {
         index: "02",
-        title: "Multi-Chain Copier Ai",
-        body: "Copy trading AI replicates successful traders' strategies, no advanced skills required. Benefit from expert traders effortlessly. Revolutionize your trading with ProfitAI.",
+        title: "KOL Analyzing",
+        body: "The KOL Analyzing Feature is a powerful tool designed to provide users with in-depth insights into the strategies and performance of key opinion leaders (KOLs) in the crypto trading space.",
         icon: <CopyAI />
     },
     {
         index: "03",
-        title: "ProfitAI Signal Bot",
-        body: "ProfitAI signal bot analyzes crypto markets, generates automated trading signals across multiple chains using technical, fundamental analysis, and machine learning, making trading profitable and enjoyable.",
+        title: "KOL Copy Trading",
+        body: "The KOL Copy Trading Feature simplifies crypto trading by enabling users to automatically replicate the strategies of key opinion leaders (KOLs) in the trading world.",
         icon: <Signal />
     },
     {
         index: "04",
-        title: "ProfitPAD",
-        body: "Profit.PAD automates smart contract creation and deployment using NLP and code generation. Features include code generation, templates, syntax checking, testing, deployment guidance, and monitoring.",
+        title: "Signal AI",
+        body: "ProfitAI signal bot is a computer program designed to analyze crypto currency markets and generate trading signals based on predefined criteria or algorithms on chain.",
         icon: <Presale />
     },
     {
         index: "05",
-        title: "KOL AI",
-        body: "Enables Smart analysis and trade on KOL call across multiple chains, channels and platforms. You can now trade narrative without having to find them and having to battle with late entry. All can be traded with few preset clicks.",
+        title: "Manual Buying",
+        body: "The Multi-chain Sniper Bot feature of ProfitAI has all the essentials you need when it comes to trading in multiple chains and decentralized exchanges.",
         icon: <Dev />
     },
     {
         index: "06",
-        title: "MEV Bot",
-        body: "MEV (Miner Extractable Value) refers to profits extracted by bots from transaction ordering inefficiencies in DeFi. Bots leverage mempool data to identify and exploit arbitrage opportunities for financial gain.",
+        title: "Top Performing KOLs Leaderboard",
+        body: "Determine the top performing KOLs by volume and ROI performance. Safe cost, and understand the possible performance of a KoL based on their performance data.Get insight into Which KoL is suitable for your values prepositions.",
         icon: <MEV />
     },
 ]
@@ -359,7 +359,7 @@ export const socialMedia = [
     },
     {
         icon: <GithubIcon />,
-        url: ""
+        url: "https://profit-ai-1.gitbook.io/profit-ai-whitepaper"
     },
     {
         icon: <YoutubeIcon />,
