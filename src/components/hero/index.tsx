@@ -20,7 +20,7 @@ export const Hero: React.FC<{}> = () => {
             overflow={"hidden"}
         >
             <Box
-                flex={"60%"}
+                flex={"70%"}
                 position={"relative"}
                 zIndex={100}
             >
@@ -29,7 +29,7 @@ export const Hero: React.FC<{}> = () => {
                     fontFamily={"Poppins"}
                     fontWeight={600}
                     fontSize={{ mobile: 35, miniTablet: 45, tablet: 50, xl: 58 }}
-                    lineHeight={{ mobile: "45px", miniTablet: "50px", tablet: "60px", xl: "64px" }}
+                    lineHeight={{ mobile: "45px", miniTablet: "60px", tablet: "70px", xl: "80px" }}
                     color={"#FFFFFF"}
                     whiteSpace={"normal"}
                     sx={{
@@ -44,15 +44,15 @@ export const Hero: React.FC<{}> = () => {
                         fontSize={"inherit"}
                         lineHeight={"inherit"}
                     >
-                        ProfitAi
+                        ProfitAi -
                     </Typography>
                     <TypeAnimation
                         sequence={[
-                            ' revolutionizes\n',
+                            ' The Most Advanced\n',
                             1000,
-                            ' revolutionizes\ncryptocurrency access',
+                            ' The Most Advanced\nKOL',
                             1000,
-                            ' revolutionizes\nblockchain access',
+                            ' The Most Advanced\nTrading Infrastructure',
                             1000,
                         ]}
                         repeat={Infinity}
@@ -79,7 +79,7 @@ export const Hero: React.FC<{}> = () => {
                         textWrap: "balance"
                     }}
                 >
-                    We believe that by leveraging the power of artificial intelligence (AI), we can empower users to make informed decisions and harness the full potential of digital assets and blockchain innovations.
+                    ProfitAi is an AI-driven platform with which you can track the real performance of KOLs and make trades on their signals instantly using our trading infrastructure on telegram.
                 </Typography>
                 <Stack
                     className="callToAction"
@@ -130,7 +130,7 @@ export const Hero: React.FC<{}> = () => {
                 </Stack>
             </Box>
             <Box
-                flex={"40%"}
+                flex={"30%"}
                 zIndex={10}
             >
                 <HeaderImg
